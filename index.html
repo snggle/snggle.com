@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+
+function fileExist(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', url, false);
+    xhr.send();
+    return xhr.status === 200;
+}
+
+async function main() {
+  // delay redirect by at least 3 seconds
+  var sleepPromise = sleep(4000)
+
+  console.info("INFO: Setting up load balancing...")
+  var cid = "bafybeidamxep7wgeavv277bb2j3mpfh3h5ltuyag46gl3gib5hkalerw3m"
+
+  // Choose random gateway to distribute the traffic
+  var gateways = [
+     `https://ipfs.snggle.com/ipfs/${cid}`,
+  ];
+  var i = Math.floor(Math.random() * gateways.length);
+  var gateway = gateways[i];
+
+  await sleepPromise;
+
+  console.info("INFO: Checking if web app exist...")
+  if (fileExist(`${gateway}/index.html`)) {
+    console.info("INFO: Success, resources were found!")
+
+    console.info(`INFO: Redirecting -> ${gateway}`)
+    window.location.replace(gateway);
+  } else {
+    console.error("ERROR: Failure, resources were NOT found!")
+    document.getElementById('div-info').style.display = 'none'
+    document.getElementById('div-error').style.display = ''
+
+    document.getElementById('vid-snggle').style.display = 'none'
+    document.getElementById('vid-404').style.display = ''
+ 
+    console.error("ERROR: We were not able to find the app")
+    console.info("INFO: Visit following github page to find latest release: https://github.com/snggle/snggle.com/releases/tag/v0.0.1")
+  }
+
+  console.info("INFO: Page loader finished")
+}
+
+console.info("INFO: Page loader started")
+main();
+</script>
+
+<style>
+  @font-face { font-family: Modeseven; src: url('https://ipfs.snggle.com/ipfs/QmWDFHNFY6ZajwBrZrrMBP3FEkDE1Ef5pVCeLbWN6ihdt7'); } 
+  html, body {background-color: black;justify-content: center;text-align: center;display: block; height: 99% }
+  span {color: #d5d5d5; line-height: 1.7;font-size: 18px;font-family:'Modeseven'}
+  video {   width: 256px; padding-bottom: 32px;   }
+  p {text-align:center; justify-content: center; align-items: center; padding: 8px; }
+  div {text-align:center; justify-content: center; align-items: center; display: block; margin-left: auto; margin-right: auto; }
+  .container { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+</style>
+<title>SNGGLE</title>
+<link rel="icon" type="image/png" href="https://ipfs.snggle.com/ipfs/QmSyisGGSbiNfunsmPsNMGCofEzaq3hi2HK6ESrRfQoSLQ">
+</head>
+<body>
+  <div class="container">
+  <video id="vid-snggle" autoplay loop muted inline style="display:'';">
+    <source src="https://ipfs.snggle.com/ipfs/Qmcu1UUUbanLeAeBSWWJERBz9GvwKNcRiokU1oZxvJRsQ2" type="video/mp4">
+  </video>
+  <video id="vid-404" autoplay loop muted inline style="display: none; height: 192px;margin-top: 78px;">
+    <source src="https://ipfs.snggle.com/ipfs/QmWhmm3tQd6SDq6eAFdnjvT8frTZiA5yERrwD4cFx5o9U6" type="video/mp4">
+  </video>
+  <div>
+    <div id="div-info" style="width: 768px; display:'';">
+      <span>You are leaving </span>
+      <a href="https://snggle.com"><span><strong>snggle.com</strong></span></a>&nbsp
+      <span>
+        and are being redirected to the independent, community-operated instance of the open source front end, hosted and served on the distributed, peer-to-peer file network IPFS...
+      </span>
+    </div>
+  </div>
+  <div>
+    <div  id="div-error" style="width: 768px; display: none;">
+      
+      <span><b>CID: bafybeidamxep7wgeavv277bb2j3mpfh3h5ltuyag46gl3gib5hkalerw3m</b><br><br></span>
+
+      <span>The IPFS gateway is currently not available, please visit our </span>
+      <a id="rel-link" href="https://github.com/snggle/snggle.com/releases/tag/v0.0.1"><span><strong>GitHub repository</strong></span></a>&nbsp
+      <span>
+        where you can download latest release, alternatively copy above CID and try another 
+        <a id="rel-link" href="https://ipfs.github.io/public-gateway-checker/"><span><strong>public gateway</strong></span></a>
+        or click
+      </span>
+      <a href="#" onclick="window.location.reload(true);"><span><strong>F5</strong></span></a>&nbsp
+      <span>
+        to refresh the page and try connecting again :)
+      </span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
