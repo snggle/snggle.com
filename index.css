@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Mulish", sans-serif;
-    src: url("./static/fonts/Mulish/Mulish.ttf") "true-type";
+    src: url("./static/fonts/Mulish/Mulish.ttf") format("truetype");
+    font-display: swap;
 }
 
 html,
