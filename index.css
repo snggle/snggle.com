@@ -124,7 +124,7 @@ body {
     justify-content: center;
     width: 100%;
     background: white;
-    background-image: url("./static/images/intro_section.svg");
+    background-image: url("./static/images/home/intro_section.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100% 0;
@@ -174,7 +174,7 @@ body {
     justify-content: center;
     width: 100%;
     background: #FBEAD2;
-    background-image: url("./static/images/about_section.svg");
+    background-image: url("./static/images/home/about_section.svg");
     background-repeat: no-repeat;
     background-position: 100% -200%;
 }
@@ -213,7 +213,7 @@ body {
     justify-content: center;
     width: 100%;
     background: white;
-    background-image: url("./static/images/security_section.svg");
+    background-image: url("./static/images/home/security_section.svg");
     background-repeat: no-repeat;
     background-position: 0 10%;
 }
