@@ -3,11 +3,94 @@
     src: url("./static/fonts/Mulish/Mulish.ttf") "true-type";
 }
 
-body {
-    -webkit-overflow-scrolling: touch;
-    min-height: -webkit-fill-available;
-    background: #fff;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #fff;
 }
 
 .navigation {
@@ -35,18 +118,18 @@ body {
     cursor: pointer;
 }
 
-.main {
+.intro {
     display: flex;
     justify-content: center;
     width: 100%;
     background: white;
-    background-image: url("./static/images/main_section.svg");
+    background-image: url("./static/images/intro_section.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100% 0;
 }
 
-.main__wrapper {
+.intro__wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -56,13 +139,13 @@ body {
     max-width: 1440px;
 }
 
-.main__images__title {
+.intro__images__title {
     width: 586px;
     height: 182px;
     margin-left: -50px;
 }
 
-.main__info {
+.intro__info {
     display: flex;
     flex-direction: column;
     max-width: 760px;
@@ -71,31 +154,31 @@ body {
     color: #000000;
 }
 
-.main__title {
+.intro__title {
     font-style: normal;
     font-weight: 800;
     font-size: 28px;
     line-height: 144%;
 }
 
-.main__description {
+.intro__description {
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 144%;
 }
 
-.app {
+.about {
     display: flex;
     justify-content: center;
     width: 100%;
     background: #FBEAD2;
-    background-image: url("./static/images/app_section.svg");
+    background-image: url("./static/images/about_section.svg");
     background-repeat: no-repeat;
     background-position: 100% -200%;
 }
 
-.app__wrapper {
+.about__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,7 +188,7 @@ body {
     max-width: 1440px;
 }
 
-.app__description {
+.about__description {
     font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -116,7 +199,7 @@ body {
     color: #000000;
 }
 
-.app__image {
+.about__image {
     position: absolute;
     left: 90px;
     top: -80px;
@@ -124,17 +207,17 @@ body {
     height: 76px;
 }
 
-.abilities {
+.security {
     display: flex;
     justify-content: center;
     width: 100%;
     background: white;
-    background-image: url("./static/images/abilities_section.svg");
+    background-image: url("./static/images/security_section.svg");
     background-repeat: no-repeat;
     background-position: 0 10%;
 }
 
-.abilities__wrapper {
+.security__wrapper {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -144,7 +227,7 @@ body {
     max-width: 1440px;
 }
 
-.abilities__title {
+.security__title {
     max-width: 832px;
     font-family: "Mulish", sans-serif;
     font-style: normal;
@@ -156,7 +239,7 @@ body {
     color: #000000;
 }
 
-.abilities__description {
+.security__description {
     max-width: 832px;
     font-family: "Mulish", sans-serif;
     font-style: normal;
