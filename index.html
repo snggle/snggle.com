@@ -8,13 +8,77 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <nav class="navigation">
+        <section class="header">
+            <div class="header__wrapper">
+                <button
+                    class="header__menu"
+                    id="navigation-toggle"
+                    onclick="toggleNavigation()"
+                ></button>
+            </div>
+        </section>
+        <nav class="navigation" id="navigation">
             <div class="navigation__wrapper">
-                <img
-                    src="./static/images/burger_menu.svg"
-                    alt="burger menu"
-                    class="navigation__menu"
-                />
+                <a class="navigation__item">
+                    <span class="navigation__item__label">
+                        Home
+                    </span>
+                    <img
+                        src="./static/images/arrow.svg"
+                        alt="arrow"
+                        class="navigation__item__arrow"
+                    />
+                </a>
+                <a class="navigation__item">
+                    <span class="navigation__item__label">
+                        SNGGLE !?
+                    </span>
+                    <img
+                        src="./static/images/arrow.svg"
+                        alt="arrow"
+                        class="navigation__item__arrow"
+                    />
+                </a>
+                <a class="navigation__item">
+                    <span class="navigation__item__label">
+                        FAQ
+                    </span>
+                    <img
+                        src="./static/images/arrow.svg"
+                        alt="arrow"
+                        class="navigation__item__arrow"
+                    />
+                </a>
+                <a class="navigation__item">
+                    <span class="navigation__item__label">
+                        Documentation
+                    </span>
+                    <img
+                        src="./static/images/arrow.svg"
+                        alt="arrow"
+                        class="navigation__item__arrow"
+                    />
+                </a>
+                <a class="navigation__item">
+                    <span class="navigation__item__label">
+                        Download
+                    </span>
+                    <img
+                        src="./static/images/arrow.svg"
+                        alt="arrow"
+                        class="navigation__item__arrow"
+                    />
+                </a>
+                <a class="navigation__item">
+                    <span class="navigation__item__label">
+                        Contribute
+                    </span>
+                    <img
+                        src="./static/images/arrow.svg"
+                        alt="arrow"
+                        class="navigation__item__arrow"
+                    />
+                </a>
             </div>
         </nav>
         <section class="intro">
@@ -156,4 +220,14 @@
             </div>
         </footer>
     </body>
+    <script>
+        /** Shows/closes navigation.
+         * Toggles navigation class for button and disables scroll behaviour.
+         */
+        function toggleNavigation() {
+            document.getElementById("navigation").classList.toggle("show")
+            document.getElementById("navigation-toggle").classList.toggle("close")
+            document.body.classList.toggle("scroll-disabled")
+        }
+    </script>
 </html>
