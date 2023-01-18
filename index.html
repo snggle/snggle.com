@@ -4,81 +4,86 @@
     <head>
         <title>SNGGLE</title>
         <link rel="icon" type="image/png" href="https://ipfs.snggle.com/ipfs/QmSyisGGSbiNfunsmPsNMGCofEzaq3hi2HK6ESrRfQoSLQ">
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <section class="header">
             <div class="header__wrapper">
-                <button
+                <div class="header__content">
+                    <button
                     class="header__menu"
                     id="navigation-toggle"
                     onclick="toggleNavigation()"
                 ></button>
+                </div>
             </div>
         </section>
         <nav class="navigation" id="navigation">
             <div class="navigation__wrapper">
-                <a class="navigation__item">
-                    <span class="navigation__item__label">
-                        Home
-                    </span>
-                    <img
-                        src="./static/images/arrow.svg"
-                        alt="arrow"
-                        class="navigation__item__arrow"
-                    />
-                </a>
-                <a class="navigation__item">
-                    <span class="navigation__item__label">
-                        SNGGLE !?
-                    </span>
-                    <img
-                        src="./static/images/arrow.svg"
-                        alt="arrow"
-                        class="navigation__item__arrow"
-                    />
-                </a>
-                <a class="navigation__item">
-                    <span class="navigation__item__label">
-                        FAQ
-                    </span>
-                    <img
-                        src="./static/images/arrow.svg"
-                        alt="arrow"
-                        class="navigation__item__arrow"
-                    />
-                </a>
-                <a class="navigation__item">
-                    <span class="navigation__item__label">
-                        Documentation
-                    </span>
-                    <img
-                        src="./static/images/arrow.svg"
-                        alt="arrow"
-                        class="navigation__item__arrow"
-                    />
-                </a>
-                <a class="navigation__item">
-                    <span class="navigation__item__label">
-                        Download
-                    </span>
-                    <img
-                        src="./static/images/arrow.svg"
-                        alt="arrow"
-                        class="navigation__item__arrow"
-                    />
-                </a>
-                <a class="navigation__item">
-                    <span class="navigation__item__label">
-                        Contribute
-                    </span>
-                    <img
-                        src="./static/images/arrow.svg"
-                        alt="arrow"
-                        class="navigation__item__arrow"
-                    />
-                </a>
+                <div class="navigation__content">
+                    <a class="navigation__item">
+                        <span class="navigation__item__label">
+                            Home
+                        </span>
+                        <img
+                            src="./static/images/reverted_arrow.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a class="navigation__item">
+                        <span class="navigation__item__label">
+                            SNGGLE !?
+                        </span>
+                        <img
+                            src="./static/images/arrow.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a class="navigation__item">
+                        <span class="navigation__item__label">
+                            FAQ
+                        </span>
+                        <img
+                            src="./static/images/arrow.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a class="navigation__item">
+                        <span class="navigation__item__label">
+                            Documentation
+                        </span>
+                        <img
+                            src="./static/images/arrow.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a class="navigation__item">
+                        <span class="navigation__item__label">
+                            Download
+                        </span>
+                        <img
+                            src="./static/images/arrow.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a class="navigation__item">
+                        <span class="navigation__item__label">
+                            Contribute
+                        </span>
+                        <img
+                            src="./static/images/arrow.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                </div>
             </div>
         </nav>
         <section class="intro">
@@ -88,54 +93,58 @@
                 class="intro__image"
             />
             <div class="intro__wrapper">
-                <div class="intro__info">
+                <div class="intro__content">
+                    <div class="intro__info">
+                        <img
+                            src="./static/images/home/title.svg"
+                            alt="title"
+                            class="intro__images__title"
+                        />
+                        <h3 class="intro__title">
+                            Is a first of it's kind hardware security & communication
+                            system. This is an entirely off-line mobile application
+                            whose purpose is to keep all your inmost secrets safe.
+                        </h3>
+                        <span class="intro__description">
+                            Whether it's a password, a document, a photo, a 2FA 
+                            code, a private key carrying billion dollars within, or the 
+                            utmost private conversation you need to keep safe,
+                            <b>
+                                SNGGLE
+                            </b>
+                            will be at your side keeping
+                            your secrets secure.
+                        </span>
+                    </div>
                     <img
-                        src="./static/images/home/title.svg"
-                        alt="title"
-                        class="intro__images__title"
+                        src="./static/images/home/intro_section.svg"
+                        alt="intro section"
+                        class="intro__main-image"
                     />
-                    <h3 class="intro__title">
-                        Is a first of it's kind hardware security & communication
-                        system. This is an entirely off-line mobile application
-                        whose purpose is to keep all your inmost secrets safe.
-                    </h3>
-                    <span class="intro__description">
-                        Whether it's a password, a document, a photo, a 2FA 
-                        code, a private key carrying billion dollars within, or the 
-                        utmost private conversation you need to keep safe,
-                        <b>
-                            SNGGLE
-                        </b>
-                        will be at your side keeping
-                        your secrets secure.
-                    </span>
                 </div>
-                <img
-                    src="./static/images/home/intro_section.svg"
-                    alt="intro section"
-                    class="intro__main-image"
-                />
             </div>
         </section>
         <section class="about">
             <div class="about__wrapper">
-                <div class="about__intro">
+                <div class="about__content">
+                    <div class="about__intro">
+                        <img
+                            src="./static/images/home/heart.svg"
+                            alt="heart"
+                            class="about__image"
+                        />
+                    <span class="about__description">
+                        The <b>SNGGLE</b> app is an ever-evolving labor of love for true privacy with the utmost consideration for what truly matters to those in
+                        need of the most fundamental freedoms for every human being on
+                        the planet.
+                    </span>
+                    </div>
                     <img
-                        src="./static/images/home/heart.svg"
-                        alt="heart"
-                        class="about__image"
+                        src="./static/images/home/about_section.svg"
+                        alt="asterisk"
+                        class="about__main-image"
                     />
-                <span class="about__description">
-                    The <b>SNGGLE</b> app is an ever-evolving labor of love for true privacy with the utmost consideration for what truly matters to those in
-                    need of the most fundamental freedoms for every human being on
-                    the planet.
-                </span>
                 </div>
-                <img
-                    src="./static/images/home/about_section.svg"
-                    alt="asterisk"
-                    class="about__main-image"
-                />
             </div>
         </section>
         <section class="security">
@@ -145,98 +154,104 @@
                 class="security__image"
             />
             <div class="security__wrapper">
-                <div class="security__main-image__wrapper">
-                    <img 
-                        src="./static/images/home/security_section.png"
-                        alt="security"
-                        class="security__main-image"
-                    />
-                </div>
-                <div class="security__info">
-                    <span class="security__title">
-                        <b>SNGGLE</b> uses end-to-end encrypted and air-gapped means of
-                        communication with other Snuggles to transport signatures,
-                        messages, documents, password or any other secret information
-                        to and from devices that require them.
-                    </span>
-                    <br />
-                    <span class="security__description">
-                        With support for both sequential QR codes and fully hands off experience over in-house developed audio transmission protocol
-                        <b>SNGGLE</b> makes it safe and convenient to interact with the world while remaining fully off-line.
-                    </span>
+                <div class="security__content">
+                    <div class="security__main-image__wrapper">
+                        <img 
+                            src="./static/images/home/security_section.png"
+                            alt="security"
+                            class="security__main-image"
+                        />
+                    </div>
+                    <div class="security__info">
+                        <span class="security__title">
+                            <b>SNGGLE</b> uses end-to-end encrypted and air-gapped means of
+                            communication with other Snuggles to transport signatures,
+                            messages, documents, password or any other secret information
+                            to and from devices that require them.
+                        </span>
+                        <br />
+                        <span class="security__description">
+                            With support for both sequential QR codes and fully hands off experience over in-house developed audio transmission protocol
+                            <b>SNGGLE</b> makes it safe and convenient to interact with the world while remaining fully off-line.
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="privacy">
             <div class="privacy__wrapper">
-                <div class="privacy__info">
-                    <h3 class="privacy__title">
-                        How is SNGGLE better than other privacy applications?
-                    </h3>
-                    <span class="privacy__description">
-                        While various privacy applications might offer certain features overlapping with
-                        <b>
-                            SNGGLE
-                        </b>
-                        , they often remain online and require installation on all your devices to function, unintentionally divulging all your secrets to anyone who takes control over any single one of your devices in an unauthorized manner.
-                        <b>SNGGLE</b>
-                        is intended to exist as
-                        an extension of your own hand in a single copy with exceptions for optional and encrypted backups.
-                    </span>
-                </div>
-                <div class="privacy__image__wrapper">
-                    <img
-                        src="./static/images/home/privacy_section.svg"
-                        alt="privacy"
-                        class="privacy__image"
-                    />
+                <div class="privacy__content">
+                    <div class="privacy__info">
+                        <h3 class="privacy__title">
+                            How is SNGGLE better than other privacy applications?
+                        </h3>
+                        <span class="privacy__description">
+                            While various privacy applications might offer certain features overlapping with
+                            <b>
+                                SNGGLE
+                            </b>
+                            , they often remain online and require installation on all your devices to function, unintentionally divulging all your secrets to anyone who takes control over any single one of your devices in an unauthorized manner.
+                            <b>SNGGLE</b>
+                            is intended to exist as
+                            an extension of your own hand in a single copy with exceptions for optional and encrypted backups.
+                        </span>
+                    </div>
+                    <div class="privacy__image__wrapper">
+                        <img
+                            src="./static/images/home/privacy_section.svg"
+                            alt="privacy"
+                            class="privacy__image"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
         <footer class="footer">
             <div class="footer__wrapper">
-                <div class="footer__image__wrapper">
-                    <img
-                        src="./static/images/logo.svg"
-                        alt="logo"
-                        class="footer__image"
-                    />
-                </div>
-                <div class="footer__links">
-                    <ul class="footer__links__list">
-                        <li class="footer__links__list__item">
-                            <a>
-                                Home
-                            </a>
-                        </li>
-                        <li class="footer__links__list__item">
-                            <a>
-                                SNGGLE !?
-                            </a>
-                        </li>
-                        <li class="footer__links__list__item">
-                            <a>
-                                FAQ
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="footer__links__list">
-                        <li class="footer__links__list__item">
-                            <a>
-                                Documentation
-                            </a>
-                        </li>
-                        <li class="footer__links__list__item">
-                            <a>
-                                Download
-                            </a>
-                        </li>
-                        <li class="footer__links__list__item">
-                            <a>
-                                Contribute
-                            </a>
-                        </li>
-                    </ul>
+                <div class="footer__content">
+                    <div class="footer__image__wrapper">
+                        <img
+                            src="./static/images/logo.svg"
+                            alt="logo"
+                            class="footer__image"
+                        />
+                    </div>
+                    <div class="footer__links">
+                        <ul class="footer__links__list">
+                            <li class="footer__links__list__item">
+                                <a>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a>
+                                    SNGGLE !?
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a>
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__links__list">
+                            <li class="footer__links__list__item">
+                                <a>
+                                    Documentation
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a>
+                                    Download
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a>
+                                    Contribute
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
