@@ -417,6 +417,14 @@ body {
         display: none;
     }
 
+    .intro__images__title {
+        position: absolute;
+        left: 5%;
+        top: 70px;
+        margin-left: unset;
+        width: 80%;
+    }
+
     .intro__wrapper {
         max-width: 1024px;
     }
@@ -425,10 +433,6 @@ body {
         margin: 30px 5% 60px;
         padding: unset;
         width: 90%;
-    }
-
-    .intro__images__title {
-        display: none;
     }
 
     .intro__info {

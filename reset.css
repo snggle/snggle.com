@@ -4,6 +4,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Liberation Mono", sans-serif;
+    src: url("./static/fonts/LiberationMono-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
 html,
 body,
 div,
