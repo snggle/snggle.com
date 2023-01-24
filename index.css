@@ -17,6 +17,7 @@ body {
     max-width: 1600px;
     background: rgba(255, 255, 255, 0.24);
     backdrop-filter: blur(87px);
+    -webkit-backdrop-filter: blur(87px);
 }
 
 .header__content {
@@ -51,6 +52,7 @@ body {
     max-width: 1600px;
     background: rgba(255, 255, 255, 0.24);
     backdrop-filter: blur(87px);
+    -webkit-backdrop-filter: blur(87px);
 }
 
 .navigation__content {
