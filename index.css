@@ -21,7 +21,7 @@ body {
 }
 
 .header__content {
-    margin: 12px 5%;
+    margin: 12px 150px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -56,7 +56,7 @@ body {
 }
 
 .navigation__content {
-    margin: 0 5%;
+    margin: 0 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -138,7 +138,7 @@ body {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    margin: 0 0 0 5%;
+    margin: 0 0 0 150px;
     width: 100%;
 }
 
@@ -164,7 +164,7 @@ body {
     font-weight: 800;
     font-size: 27px;
     line-height: 144%;
-    margin-top: 325px;
+    margin-top: 335px;
 }
 
 .intro__description {
@@ -194,7 +194,7 @@ body {
 }
 
 .about__content {
-    margin: 32px 0 130px 5%;
+    margin: 32px 0 130px 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -239,7 +239,7 @@ body {
 }
 
 .security__content {
-    margin: 0 5% 0 0;
+    margin: 0 150px 0 0;
     height: 632px;
 }
 
@@ -293,7 +293,7 @@ body {
 .privacy__content {
     display: flex;
     align-items: center;
-    margin: 130px 0 130px 5%;
+    margin: 130px 150px;
 }
 
 .privacy__info {
@@ -352,7 +352,7 @@ body {
 .footer__content {
     display: flex;
     justify-content: space-between;
-    margin: 90px 5%;
+    margin: 90px 150px;
 }
 
 .footer__image {
@@ -388,7 +388,7 @@ body {
     color: #000;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1425px) {
     .intro__info {
         display: flex;
         flex-direction: row-reverse;
@@ -418,11 +418,20 @@ body {
     .intro__images {
         left: 0;
     }
+
+    .security__info {
+        padding: 2.5% 0 0 0;
+    }
 }
 
 @media (max-width: 1200px) {
     .security__info {
-        padding: 1% 0 0 0;
+        padding: 0;
+    }
+
+    .privacy__content {
+        flex-direction: column;
+        margin: 130px 150px;
     }
 }
 
@@ -432,8 +441,16 @@ body {
         max-width: 1024px;
     }
 
+    .header__content {
+        margin: 12px 5%;
+    }
+
     .navigation__wrapper {
         max-width: 1024px;
+    }
+
+    .navigation__content {
+        margin: 0 5%;
     }
 
     .navigation__item {
@@ -513,7 +530,7 @@ body {
     .about__content {
         padding: unset;
         flex-direction: column;
-        margin-bottom: -100px;
+        margin: 32px 0 -100px 5%;
     }
 
     .about__main-image {
@@ -608,6 +625,10 @@ body {
 
     .footer__wrapper {
         max-width: unset;
+    }
+
+    .footer__content {
+        margin: 40px 5%;
     }
 
     .footer__image__wrapper {

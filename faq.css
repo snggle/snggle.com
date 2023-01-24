@@ -16,7 +16,7 @@
 }
 
 .header__content {
-    margin: 12px 5%;
+    margin: 12px 150px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -51,7 +51,7 @@
 }
 
 .navigation__content {
-    margin: 0 5%;
+    margin: 0 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -419,6 +419,18 @@
     .main__points__item__content__label img {
         width: 32px;
         height: 32px;
+    }
+
+    .header__content {
+        margin: 12px 5%;
+    }
+
+    .navigation__content {
+        margin: 0 5%;
+    }
+
+    .footer__content {
+        margin: 40px 5%;
     }
 
     .navigation__item {
