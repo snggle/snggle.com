@@ -134,46 +134,35 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
     margin: 0 0 0 5%;
+    width: 100%;
 }
 
-.intro__images__title {
-    width: 586px;
-    height: 182px;
-    margin-left: -50px;
+.intro__images {
+    position: absolute;
+    top: 60px;
+    display: flex;
+    gap: 50px;
 }
 
 .intro__info {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 150px 0 108px 0;
     font-family: "Mulish", sans-serif;
     color: #000000;
 }
 
-.intro__info__title-images {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.intro__images__cloud {
-    width: 625px;
-    height: 264px;
-    position: absolute;
-    left: 586px;
-}
-
-.intro__image {
+.intro__image,
+.intro__cloud-image {
     display: none;
 }
 
 .intro__title {
     font-style: normal;
     font-weight: 800;
-    font-size: 28px;
+    font-size: 27px;
     line-height: 144%;
+    margin-top: 325px;
 }
 
 .intro__description {
@@ -185,6 +174,9 @@ body {
 
 .intro__main-image {
     height: 100%;
+    float: right;
+    shape-outside: url("./static/images/home/intro_section.svg");
+    shape-margin: 10px;
 }
 
 .about {
@@ -245,29 +237,20 @@ body {
 }
 
 .security__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin: 0 5% 0 0;
-    height: 620px;
+    height: 632px;
 }
 
 .security__info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 50%;
-}
-
-.security__main-image__wrapper {
-    width: 50%;
-    height: 100%;
+    padding: 5% 0 0 0;
 }
 
 .security__main-image {
-    width: 100%;
+    width: 60%;
     height: 100%;
+    shape-outside: url("./static/images/home/security_section.png");
+    shape-margin: 15px;
+    float: left;
 }
 
 .security__title {
@@ -275,20 +258,19 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    text-align: left;
     line-height: 144%;
     letter-spacing: 0.03em;
     color: #000000;
+    padding: 20px 0 10px 10px;
 }
 
 .security__description {
-    max-width: 90%;
+    text-align: left;
     font-family: "Mulish", sans-serif;
     font-style: normal;
-    text-align: right;
     font-weight: 400;
     font-size: 28px;
-    line-height: 144%;
+    line-height: 40px;
     letter-spacing: 0.03em;
     color: #000000;
 }
@@ -404,6 +386,44 @@ body {
     color: #000;
 }
 
+@media (max-width: 1350px) {
+    .intro__info {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .intro__main-image {
+        float: unset;
+        shape-outside: unset;
+        shape-margin: unset;
+    }
+
+    .intro__info__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro__title {
+        width: 600px;
+    }
+
+    .intro__description {
+        margin-bottom: 25px;
+    }
+
+    .intro__images {
+        left: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .security__info {
+        padding: 1% 0 0 0;
+    }
+}
+
 @media (max-width: 1024px) {
 
     .header__wrapper {
@@ -435,21 +455,8 @@ body {
         display: none;
     }
 
-    .intro__info__title-images {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        position: absolute;
-        left: 5%;
-        top: -20px;
-        width: 90%;
-    }
-
-    .intro__images__title {
-        margin-left: unset;
-        width: 224px;
-        height: 224px;
-        margin-top: -145px;
+    .intro__images {
+        display: none;
     }
 
     .intro__images__cloud {
@@ -481,12 +488,20 @@ body {
     
     .intro__title,
     .intro__description {
+        margin: unset;
         font-size: 18px;
+        width: 100%;
     }
 
-    .intro__image {
+    .intro__image,
+    .intro__cloud-image {
         display: block;
         width: 100%;
+    }
+
+    .intro__cloud-image {
+        position: absolute;
+        top: -50px;
     }
 
     .about__wrapper {
@@ -539,10 +554,17 @@ body {
     }
 
     .security__info {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
         width: 100%;
     }
 
-    .security__main-image__wrapper {
+    .security__main-image {
+        display: none;
+    }
+
+    .security__info br {
         display: none;
     }
 
@@ -551,6 +573,8 @@ body {
         max-width: unset;
         font-size: 18px;
         text-align: left;
+        line-height: 144%;
+        padding: 0;
     }
 
     .privacy__wrapper {

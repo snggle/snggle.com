@@ -168,7 +168,7 @@
     font-weight: 500;
     font-size: 36px;
     line-height: 144%;
-    text-align: right;
+    text-align: center;
     letter-spacing: 0.03em;
 }
 
@@ -181,6 +181,7 @@
     margin-left: -95px;
     width: 692px;
     height: 739px;
+    shape-outside: url("./static/images/snggle/who-is_main.svg");
 }
 
 .main__additional {
