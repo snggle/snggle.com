@@ -210,7 +210,7 @@
     position: absolute;
     z-index: 1;
     right: 0;
-    bottom: -400px;
+    bottom: -190px;
 }
 
 .footer {
@@ -259,6 +259,10 @@
     color: #fff;
     text-decoration: none;
     cursor: pointer;
+}
+
+.footer__links__list__item a {
+    color: white;
 }
 
 @media (max-width: 1024px) {
@@ -327,7 +331,7 @@
 
     .main__additional {
         margin: unset;
-        padding: 0 5% 90px;
+        padding: 0 5% 225px;
     }
 
     .main__additional__description {
@@ -342,7 +346,7 @@
 
     .main__additional__image {
         height: 480px;
-        bottom: -120px;
+        bottom: -60px;
         right: 0;
     }
 

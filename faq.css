@@ -321,6 +321,10 @@
     cursor: pointer;
 }
 
+.footer__links__list__item a {
+    color: #000;
+}
+
 @media (max-width: 1024px) {
 
     .header__wrapper {
