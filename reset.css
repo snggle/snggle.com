@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish";
     src: url("./static/fonts/Mulish.ttf") format("truetype");
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Liberation Mono", sans-serif;
+    font-family: "Liberation Mono";
     src: url("./static/fonts/LiberationMono-Regular.ttf") format("truetype");
     font-display: swap;
 }
@@ -94,6 +94,11 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 body {
