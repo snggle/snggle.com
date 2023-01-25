@@ -9,13 +9,14 @@
 .header__wrapper {
     display: flex;
     width: 100%;
-    max-width: 1920px;
+    max-width: 1600px;
     background: rgba(255, 255, 255, 0.24);
     backdrop-filter: blur(87px);
+    -webkit-backdrop-filter: blur(87px);
 }
 
 .header__content {
-    margin: 12px 5%;
+    margin: 12px 150px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -43,13 +44,14 @@
 
 .navigation__wrapper {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1600px;
     background: rgba(255, 255, 255, 0.24);
     backdrop-filter: blur(87px);
+    -webkit-backdrop-filter: blur(87px);
 }
 
 .navigation__content {
-    margin: 0 5%;
+    margin: 0 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -120,7 +122,9 @@
 .main__wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 1920px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
     width: 100%;
     background-image: url("./static/images/faq/faq_bg.png");
     background-repeat: no-repeat;
@@ -141,10 +145,12 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 .main__title {
-    padding: 80px 10%;
+    padding: 80px 0;
     text-align: left;
     font-family: "Mulish", sans-serif;
     font-style: italic;
@@ -163,8 +169,8 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    width: 80%;
-    padding: 0 10% 80px;
+    width: 100%;
+    padding: 0 0 80px;
 }
 
 .main__points__item {
@@ -283,7 +289,7 @@
 
 .footer__wrapper {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1600px;
 }
 
 .footer__content {
@@ -321,6 +327,10 @@
     cursor: pointer;
 }
 
+.footer__links__list__item a {
+    color: #000;
+}
+
 @media (max-width: 1024px) {
 
     .header__wrapper {
@@ -352,6 +362,10 @@
         max-width: 1024px;
     }
 
+    .main__title {
+        padding: 80px 5%;
+    }
+
     .main__points {
         width: 90%;
         padding: 0 5% 80px;
@@ -375,7 +389,8 @@
 
     .main__points__item__content__key {
         font-size: 14px;
-        line-height: 144%;
+        line-height: 22px;
+        padding: 14px;
         height: 372px;
         overflow-y: scroll;
     }
@@ -404,6 +419,18 @@
     .main__points__item__content__label img {
         width: 32px;
         height: 32px;
+    }
+
+    .header__content {
+        margin: 12px 5%;
+    }
+
+    .navigation__content {
+        margin: 0 5%;
+    }
+
+    .footer__content {
+        margin: 40px 5%;
     }
 
     .navigation__item {
