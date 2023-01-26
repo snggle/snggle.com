@@ -1,6 +1,7 @@
 body {
     background-image: url("./static/images/snggle/bg.png");
     background-size: 100% 100%;
+    zoom: 0.8;
 }
 
 .header {
@@ -44,7 +45,7 @@ body {
     top: 80px;
     z-index: 3;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh + 20%);
 }
 
 .navigation__wrapper {
@@ -275,16 +276,8 @@ body {
 
 @media (max-width: 1024px) {
 
-    .header__wrapper {
-        max-width: 1024px;
-    }
-
     .header__content {
         margin: 12px 5%;
-    }
-
-    .navigation__wrapper {
-        max-width: 1024px;
     }
 
     .navigation__content {
@@ -308,9 +301,6 @@ body {
         padding: 120px 5% 120px;
     }
 
-    .main__wrapper {
-        max-width: 1024px;
-    }
 
     .main__info__title {
         font-size: 46px;
@@ -380,10 +370,6 @@ body {
         height: 36px;
     }
 
-    .footer__wrapper {
-        max-width: unset;
-    }
-
     .footer__content {
         margin: 40px 5%;
     }
@@ -394,5 +380,31 @@ body {
 
     .footer__links {
         width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        zoom: 1;
+    }
+
+    .header__wrapper {
+        max-width: 600px;
+    }
+
+    .navigation {
+        height: calc(100vh - 80px);
+    }
+
+    .navigation__wrapper {
+        max-width: 600px;
+    }
+
+    .main__wrapper {
+        max-width: 600px;
+    }
+
+    .footer__wrapper {
+        max-width: unset;
     }
 }

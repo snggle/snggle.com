@@ -45,7 +45,7 @@ body {
     top: 80px;
     z-index: 2;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh + 20%);
 }
 
 .navigation__wrapper {
@@ -677,6 +677,10 @@ body {
 @media (max-width: 600px) {
     body {
         zoom: 1;
+    }
+
+    .navigation {
+        height: calc(100vh - 80px);
     }
 
     .navigation__wrapper {
