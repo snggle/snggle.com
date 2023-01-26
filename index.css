@@ -163,7 +163,7 @@ body {
 .intro__title {
     font-style: normal;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 28px;
     line-height: 144%;
     margin-top: 335px;
 }
@@ -178,11 +178,15 @@ body {
 .intro__description div {
     display: block;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 0.01em;
     word-spacing: normal;
     font-size: 27px;
     line-height: 40px;
+}
+
+.intro__description div b {
+    font-weight: 400;
 }
 
 .intro__description span {
@@ -310,6 +314,14 @@ body {
     padding-right: 70px;
 }
 
+.security__description div b {
+    font-weight: 600;
+}
+
+.security__description span b {
+    font-weight: 600;
+}
+
 .privacy {
     display: flex;
     justify-content: center;
@@ -326,7 +338,7 @@ body {
 .privacy__content {
     display: flex;
     align-items: center;
-    margin: 130px 50px 130px 150px;
+    margin: 60px 50px 60px 150px;
 }
 
 .privacy__info {
@@ -355,6 +367,10 @@ body {
     line-height: 144%;
     letter-spacing: 0.03em;
     color: #000000;
+}
+
+.privacy__description b {
+    font-weight: 600;
 }
 
 .privacy__image__wrapper {
@@ -711,4 +727,7 @@ body {
         max-width: unset;
     }
 
+    .footer__links__list__item {
+        font-size: 16px;
+    }
 }
