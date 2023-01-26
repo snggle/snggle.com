@@ -17,8 +17,8 @@ body {
     width: 100%;
     max-width: 1600px;
     background: rgba(255, 255, 255, 0.24);
-    backdrop-filter: blur(87px);
-    -webkit-backdrop-filter: blur(87px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .header__content {
