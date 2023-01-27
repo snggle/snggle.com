@@ -434,6 +434,11 @@ body {
         max-width: 600px;
     }
 
+    .main__info {
+        padding: 120px 16px 50px;
+        margin: unset;
+    }
+
     .footer__wrapper {
         max-width: unset;
     }

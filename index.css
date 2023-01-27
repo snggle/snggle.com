@@ -146,6 +146,7 @@ body {
 .intro__images {
     position: absolute;
     top: 60px;
+    left: 0;
     display: flex;
     gap: 50px;
 }
@@ -161,6 +162,7 @@ body {
 }
 
 .intro__title {
+    display: block;
     font-style: normal;
     font-weight: 800;
     font-size: 28px;
@@ -168,13 +170,16 @@ body {
     margin-top: 335px;
 }
 
+.intro__title__polygon,
+.intro__description__polygon {
+    display: none;
+}
+
 .intro__description {
-    height: 100%;
     display: block;
     margin-top: 25px;
 }
 
-.intro__description span,
 .intro__description div {
     display: block;
     font-style: normal;
@@ -189,15 +194,11 @@ body {
     font-weight: 400;
 }
 
-.intro__description span {
-    display: none;
-}
-
 .intro__main-image {
     height: 100%;
     float: right;
     shape-outside: url("./static/images/home/intro_section.svg");
-    shape-margin: 10px;
+    shape-margin: 13px;
 }
 
 .about {
@@ -207,6 +208,7 @@ body {
 }
 
 .about__wrapper {
+    position: relative;
     width: 100%;
     max-width: 1600px;
     background: #FBEAD2;
@@ -224,6 +226,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 81.25%;
 }
 
 .about__description {
@@ -239,6 +242,12 @@ body {
 
 .about__image {
     margin: 0 auto 0 0;
+}
+
+.about__main-image {
+    position: absolute;
+    right: 0;
+    top: 90px;
 }
 
 .security {
@@ -274,7 +283,8 @@ body {
     float: left;
 }
 
-.security__title {
+.security__title,
+.security__title-mobile {
     display: block;
     text-align: left;
     font-family: "Mulish", sans-serif;
@@ -295,7 +305,7 @@ body {
 .security__description {
     display: block;
     margin-top: 70px;
-    text-align: left;
+    text-align: right;
     font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -303,22 +313,15 @@ body {
     line-height: 40px;
     letter-spacing: 0.03em;
     color: #000000;
+    max-width: 1400px;
 }
 
-.security__description span {
+.security__title__polygon,
+.security__description__polygon {
     display: none;
 }
 
-.security__description div {
-    text-align: right;
-    padding-right: 70px;
-}
-
 .security__description div b {
-    font-weight: 600;
-}
-
-.security__description span b {
     font-weight: 600;
 }
 
@@ -438,24 +441,8 @@ body {
 }
 
 @media (max-width: 1590px) {
-    .intro__description span {
-        display: block;
-    }
-
     .intro__description div {
-        display: none;
-    }
-
-    .security__description {
-        text-align: right;
-    }
-
-    .security__description span {
-        display: block;
-    }
-
-    .security__description div {
-        display: none;
+        display: inline;
     }
 }
 
@@ -473,42 +460,23 @@ body {
         shape-margin: unset;
     }
 
-    .intro__info__text {
-        display: flex;
-        flex-direction: column;
-    }
-
     .intro__title {
         width: 600px;
-    }
-
-    .intro__description {
-        margin-bottom: 25px;
-    }
-
-    .intro__images {
-        left: 0;
-    }
-
-    .security__info {
-        padding: 2.5% 0 0 0;
-    }
-}
-
-@media (max-width: 1350px) {
-    .security__description {
-        margin-top: 20px;
     }
 }
 
 @media (max-width: 1200px) {
-    .security__info {
-        padding: 0;
+    .security__description div {
+        display: inline;
     }
 
     .privacy__content {
         flex-direction: column;
         margin: 130px 150px;
+    }
+
+    .security__description {
+        margin-top: 50px;
     }
 }
 
@@ -569,13 +537,18 @@ body {
         max-width: unset;
         align-items: flex-start;
     }
-    
+
     .intro__title,
-    .intro__description span {
+    .intro__description div,
+    .intro__description {
         margin: unset;
         font-size: 18px;
         width: 100%;
         line-height: 144%;
+    }
+
+    .intro__description {
+        margin-top: 18px;
     }
 
     .intro__image,
@@ -592,7 +565,7 @@ body {
     .about__content {
         padding: unset;
         flex-direction: column;
-        margin: 32px 0 -100px 5%;
+        margin: 32px 0 60px 5%;
     }
 
     .about__main-image {
@@ -600,15 +573,18 @@ body {
     }
 
     .about__intro {
-        padding: 5%;
-        margin-bottom: -120px;
+        width: 100%;
     }
 
     .about__image {
-        left: 0;
+        width: 48px;
+        height: 38px;
+        bottom: -50px;
+        top: unset;
     }
 
     .about__description {
+        padding-right: 10%;
         font-size: 28px;
     }
 
@@ -650,7 +626,7 @@ body {
         max-width: unset;
         font-size: 18px;
         text-align: left;
-        line-height: 144%;
+        line-height: 26px;
         padding: 0;
     }
 
@@ -710,17 +686,97 @@ body {
     .intro__wrapper {
         max-width: 600px;
     }
+    
+    .intro__content {
+        width: 100%;
+        margin: 30px 16px 0;
+    }
+
+    .intro__title__polygon {
+        display: block;
+        float: right;
+        width: 100px;
+        height: 150px;
+        shape-outside: polygon(95% 0%, 100% 00%, 20% 85%);
+    }
+
+    .intro__description__polygon {
+        display: block;
+        float: right;
+        width: 100px;
+        height: 230px;
+        shape-outside: polygon(98% 0%, 100% 00%, 70% 85%);
+    }
 
     .about__wrapper {
         max-width: 600px;
+    }
+
+    .about__content {
+        margin: 13px 16px 60px;
+    }
+
+    .about__intro {
+        max-width: unset;
+        width: 97%;
+    }
+
+    .about__description {
+        padding: unset;
+    }
+
+    .about__main-image {
+        top: unset;
+        bottom: -40px;
     }
 
     .security__wrapper {
         max-width: 600px;
     }
 
+    .security__content {
+        margin: 30px 16px 60px;
+        width: unset;
+    }
+
+    .security__info {
+        gap: 0;
+    }
+
+    .security__description {
+        margin: 0;
+    }
+
+    .security__info {
+        padding: 0;
+    }
+
+    .security__title__polygon {
+        display: block;
+        float: right;
+        width: 100px;
+        height: 210px;
+        shape-outside: polygon(99% 0%, 100% 00%, 64% 94%, 75% 75%);
+    }
+
+    .security__description__polygon {
+        display: block;
+        float: right;
+        width: 125px;
+        height: 216px;
+        shape-outside: polygon(39% 67%, 79% 29%, 0% 85%);
+    }
+
     .privacy__wrapper {
         max-width: 600px;
+    }
+
+    .privacy__content {
+        margin: 60px 5%;
+    }
+
+    .privacy__image__wrapper {
+        margin-top: 50px;
     }
 
     .footer__wrapper {
