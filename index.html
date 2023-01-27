@@ -118,26 +118,18 @@
                             class="intro__main-image"
                         />
                         <div class="intro__info__text">
-                            <h3 class="intro__title">
+                            <span class="intro__title">
+                                <div class="intro__title__polygon"></div>
                                 Is a first of it's kind hardware security & communication
                                 system. This is an entirely off-line mobile application
                                 whose purpose is to keep all your inmost secrets safe.
-                            </h3>
+                            </span>
                             <span class="intro__description">
-                                <span>
-                                Whether it's a password, a document, a photo, a 2FA 
-                                code, a private key carrying billion dollars within, or the 
-                                utmost private conversation you need to keep safe,
-                                <b>
-                                    SNGGLE
-                                </b>
-                                will be at your side keeping
-                                your secrets secure.
-                                </span>
+                                <div class="intro__description__polygon"></div>
                                 <div>Whether it's a password, a document, a photo a 2FA </div> 
                                 <div>code, a private key carrying billion dollars within, or the</div> 
                                 <div>utmost private conversation you need to keep safe,</div>
-                                <div><b>SNGGLE</b> will be at your side keeping</div>
+                                <div><b>SNGGLE</b> will be at your side keeping </div>
                                 <div>your secrets secure.</div>
                             </span>
                         </div>
@@ -160,11 +152,14 @@
                         the planet.
                     </span>
                     </div>
-                    <img
-                        src="./static/images/home/about_section.svg"
-                        alt="asterisk"
-                        class="about__main-image"
-                    />
+                    <picture>
+                        <source srcset="./static/images/home/about_section_mobile.svg" media="(max-width: 1024px)"/>
+                        <img
+                            src="./static/images/home/about_section.svg"
+                            alt="bubbles"
+                            class="about__main-image"
+                        />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -183,22 +178,18 @@
                     />
                     <div class="security__info">
                         <span class="security__title">
+                            <div class="security__title__polygon"></div>
                             <b>SNGGLE</b> uses end-to-end encrypted and air-gapped means of
                             communication with other Snuggles to transport signatures,
                             messages, documents, password or any other secret information
                             to and from devices that require them.
                         </span>
                         <span class="security__description">
+                            <div class="security__description__polygon"></div>
                             <div>With support for both sequential QR codes and fully hands</div>
                             <div>off experience over in-house developed audio transmission</div>
                             <div>protocol <b>SNGGLE</b> makes it safe and convenient to interact</div>
                             <div>with the world while remaining fully off-line.</div>
-                            <span>
-                                With support for both sequential QR codes and fully hands
-                                off experience over in-house developed audio transmission
-                                protocol <b>SNGGLE</b> makes it safe and convenient to interact
-                                with the world while remaining fully off-line.
-                            </span>
                         </span>
                     </div>
                 </div>
