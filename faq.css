@@ -99,16 +99,16 @@ body {
 }
 
 .navigation__item__label {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 64px;
     line-height: 144%;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    background: url("./static/images/label_dark_theme.svg");
+    background: url("./static/images/label_dark_theme.png");
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-size: 500% 100%;
+    background-size: 500% 300%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -203,7 +203,7 @@ body {
 }
 
 .main__points__item__label__text {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish SemiBoldItalic", sans-serif;
     font-style: italic;
     font-weight: 600;
     font-size: 32px;
@@ -219,6 +219,7 @@ body {
 }
 
 .main__points__item__content__label__text b {
+    font-family: "Mulish BoldItalic", sans-serif;
     font-weight: 700;
 }
 
@@ -242,7 +243,7 @@ body {
 .main__points__item__content {
     display: none;
     width: 100%;
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish Medium", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
@@ -274,13 +275,6 @@ body {
 
 .main__points__item__content__key span {
     word-break: break-word;
-}
-
-.main__points__item__content__key__copy {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
 }
 
 .show-faq-point {
@@ -328,7 +322,7 @@ body {
 }
 
 .footer__links__list__item {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;

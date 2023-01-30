@@ -92,18 +92,18 @@ body {
 }
 
 .navigation__item__label {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 64px;
     line-height: 144%;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    background: url("./static/images/label.svg");
+    background: url("./static/images/label.png");
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-size: 500% 100%;
+    background-size: 500% 200%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 45%;
 }
 
 .navigation__item:first-child {
@@ -163,6 +163,7 @@ body {
 
 .intro__title {
     display: block;
+    font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 28px;
@@ -191,7 +192,8 @@ body {
 }
 
 .intro__description div b {
-    font-weight: 400;
+    font-family: "Mulish Light", sans-serif;
+    font-weight: 600;
 }
 
 .intro__main-image {
@@ -215,10 +217,10 @@ body {
 }
 
 .about__content {
-    margin: 32px 0 130px 150px;
+    margin: 32px 0 130px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .about__intro {
@@ -230,7 +232,7 @@ body {
 }
 
 .about__description {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish Medium", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 44px;
@@ -238,6 +240,11 @@ body {
     text-align: center;
     letter-spacing: 0.01em;
     color: #000000;
+}
+
+.about__description b {
+    font-weight: 500;
+    font-family: "Mulish Italic", sans-serif;
 }
 
 .about__image {
@@ -272,14 +279,14 @@ body {
 }
 
 .security__info {
-    padding: 5% 0 0 0;
+    padding: 130px 0 0 0;
 }
 
 .security__main-image {
-    width: 60%;
+    width: 65%;
     height: 100%;
     shape-outside: url("./static/images/home/security_section.png");
-    shape-margin: 5px;
+    shape-margin: 0;
     float: left;
 }
 
@@ -287,33 +294,34 @@ body {
 .security__title-mobile {
     display: block;
     text-align: left;
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish Medium", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 144%;
     letter-spacing: 0.03em;
     color: #000000;
-    padding: 0 0 0 40%;
-    max-width: 815px;
+    padding: 0 0 0 42%;
+    max-width: 1450px;
 }
 
 .security__title b {
+    font-family: "Mulish SemiBold";
     font-weight: 600;
 }
 
 .security__description {
     display: block;
-    margin-top: 70px;
+    margin-top: 20px;
     text-align: right;
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish Medium", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 40px;
     letter-spacing: 0.03em;
     color: #000000;
-    max-width: 1400px;
+    max-width: 1450px;
 }
 
 .security__title__polygon,
@@ -322,6 +330,7 @@ body {
 }
 
 .security__description div b {
+    font-family: "Mulish SemiBold";
     font-weight: 600;
 }
 
@@ -341,7 +350,7 @@ body {
 .privacy__content {
     display: flex;
     align-items: center;
-    margin: 60px 50px 60px 150px;
+    margin: 130px 50px 95px 150px;
 }
 
 .privacy__info {
@@ -353,7 +362,7 @@ body {
 
 .privacy__title {
     max-width: 802px;
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish ExtraBoldItalic", sans-serif;
     font-style: italic;
     font-weight: 800;
     font-size: 54px;
@@ -373,6 +382,7 @@ body {
 }
 
 .privacy__description b {
+    font-family: "Mulish SemiBold", sans-serif;
     font-weight: 600;
 }
 
@@ -426,7 +436,7 @@ body {
 }
 
 .footer__links__list__item {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -465,14 +475,25 @@ body {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
+    .about__intro {
+        max-width: 75%;
+    }
+
     .security__description div {
         display: inline;
     }
+}
+
+@media (max-width: 1200px) {
 
     .privacy__content {
         flex-direction: column;
         margin: 130px 150px;
+    }
+
+    .security__info {
+        padding: 5% 0 0 0;
     }
 
     .security__description {
@@ -564,8 +585,7 @@ body {
 
     .about__content {
         padding: unset;
-        flex-direction: column;
-        margin: 32px 0 60px 5%;
+        margin: 32px 0 60px 0;
     }
 
     .about__main-image {
@@ -574,6 +594,7 @@ body {
 
     .about__intro {
         width: 100%;
+        max-width: 80%;
     }
 
     .about__image {
@@ -584,7 +605,6 @@ body {
     }
 
     .about__description {
-        padding-right: 10%;
         font-size: 28px;
     }
 
@@ -697,7 +717,7 @@ body {
         float: right;
         width: 100px;
         height: 150px;
-        shape-outside: polygon(95% 0%, 100% 00%, 20% 85%);
+        shape-outside: polygon(95% 10%, 100% 5%, 20% 85%);
     }
 
     .intro__description__polygon {
@@ -772,7 +792,7 @@ body {
     }
 
     .privacy__content {
-        margin: 60px 5%;
+        margin: 60px 16px;
     }
 
     .privacy__image__wrapper {
