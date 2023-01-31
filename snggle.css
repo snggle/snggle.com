@@ -176,7 +176,7 @@ body {
 
 .main__info__description,
 .main__info__description-history {
-    padding-top: 50px;
+    margin-top: 42px;
     font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -189,9 +189,10 @@ body {
 .main__info__description-history {
     position: absolute;
     right: 150px;
-    margin-top: 116px;
+    margin-top: 136px;
     padding: unset;
     font-size: 36px;
+    line-height: 58px;
     text-align: center;
 }
 
@@ -208,7 +209,8 @@ body {
 
 .main__info__description__image {
     float: left;
-    margin-left: -150px;
+    margin-left: -156px;
+    margin-top: 40px;
     height: 739px;
     shape-outside: url("./static/images/snggle/who-is_main.svg");
 }
@@ -245,7 +247,7 @@ body {
     position: absolute;
     z-index: 1;
     right: 0;
-    bottom: -190px;
+    bottom: -175px;
 }
 
 .footer {
@@ -306,12 +308,12 @@ body {
     background: #fff;
 } 
 
-@media (max-width: 1245px) {
+@media (max-width: 1280px) {
     .main__info__description-history {
         position: unset;
         right: unset;
     }
-
+    .main__info__description p,
     .main__info__description-history p {
         display: inline;
     }
@@ -341,7 +343,7 @@ body {
 
     .main__info {
         gap: 25px;
-        padding: 120px 5% 120px;
+        padding: 120px 5% 50px;
     }
 
     .main__info__title {
@@ -357,6 +359,10 @@ body {
         line-height: 144%;
         letter-spacing: 0.03em;
         text-align: center;
+    }
+
+    .main__info__description-mobile__polygon {
+        display: none;
     }
     
     .main__info__description-mobile:nth-of-type(2) {
@@ -412,8 +418,8 @@ body {
         margin-top: 18px;
     }
 
-    .main__additional__description__mobile b {
-        font-size: 18px;
+    .main__additional__description br:nth-of-type(2) {
+        display: unset;
     }
 
     .main__additional__image {
@@ -474,8 +480,13 @@ body {
         margin: unset;
     }
 
-    .main__additional__description br:nth-of-type(2) {
-        display: unset;
+    .main__info__description-mobile__polygon {
+        display: block;
+        float: right;
+        width: 100px;
+        height: 300px;
+        clip-path: polygon(76% 90%, 57% 51%, 100% 90%, 51% 74%);
+        shape-outside: polygon(76% 90%, 57% 51%, 100% 90%, 51% 74%);
     }
 
     .footer__wrapper {

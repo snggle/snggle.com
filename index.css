@@ -163,12 +163,14 @@ body {
 
 .intro__title {
     display: block;
+    width: 1450px;
     font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 28px;
     line-height: 144%;
     margin-top: 335px;
+    letter-spacing: 0.06em;
 }
 
 .intro__title__polygon,
@@ -189,6 +191,7 @@ body {
     word-spacing: normal;
     font-size: 27px;
     line-height: 40px;
+    letter-spacing: 0.06em;
 }
 
 .intro__description div b {
@@ -312,14 +315,14 @@ body {
 
 .security__description {
     display: block;
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: right;
-    font-family: "Mulish Medium", sans-serif;
+    font-family: "Mulish", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 40px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.08em;
     color: #000000;
     max-width: 1450px;
 }
@@ -350,7 +353,7 @@ body {
 .privacy__content {
     display: flex;
     align-items: center;
-    margin: 130px 50px 95px 150px;
+    margin: 130px 38px 93px 150px;
 }
 
 .privacy__info {
@@ -450,13 +453,31 @@ body {
     color: #000;
 }
 
-@media (max-width: 1590px) {
+@media (max-width: 1280px) {
+    .about__intro {
+        max-width: 75%;
+    }
+
+    .intro__description div,
+    .intro__title div {
+        display: inline;
+    }
     .intro__description div {
         display: inline;
     }
-}
+    
+    .security__description div {
+        display: inline;
+    }
 
-@media (max-width: 1425px) {
+    .security__info {
+        padding: 2.5% 0 0 0;
+    }
+
+    .security__description {
+        margin-top: 1.5rem;
+    }
+
     .intro__info {
         display: flex;
         flex-direction: row-reverse;
@@ -464,24 +485,14 @@ body {
         height: 100%;
     }
 
+    .intro__title {
+        width: 600px;
+    }
+
     .intro__main-image {
         float: unset;
         shape-outside: unset;
         shape-margin: unset;
-    }
-
-    .intro__title {
-        width: 600px;
-    }
-}
-
-@media (max-width: 1280px) {
-    .about__intro {
-        max-width: 75%;
-    }
-
-    .security__description div {
-        display: inline;
     }
 }
 
@@ -490,14 +501,6 @@ body {
     .privacy__content {
         flex-direction: column;
         margin: 130px 150px;
-    }
-
-    .security__info {
-        padding: 5% 0 0 0;
-    }
-
-    .security__description {
-        margin-top: 50px;
     }
 }
 
@@ -712,12 +715,17 @@ body {
         margin: 30px 16px 0;
     }
 
+    .intro__title,
+    .intro__description div {
+        letter-spacing: unset;
+    }
+
     .intro__title__polygon {
         display: block;
         float: right;
         width: 100px;
         height: 150px;
-        shape-outside: polygon(95% 10%, 100% 5%, 20% 85%);
+        shape-outside: polygon(100% 43%, 36% 79%, 72% 85%);
     }
 
     .intro__description__polygon {
@@ -725,7 +733,7 @@ body {
         float: right;
         width: 100px;
         height: 230px;
-        shape-outside: polygon(98% 0%, 100% 00%, 70% 85%);
+        shape-outside: polygon(96% 0%, 100% 00%, 70% 70%);
     }
 
     .about__wrapper {
@@ -742,6 +750,7 @@ body {
     }
 
     .about__description {
+        letter-spacing: unset;
         padding: unset;
     }
 
@@ -764,19 +773,24 @@ body {
     }
 
     .security__description {
-        margin: 0;
+        margin: 5px 0 0 0;
+        letter-spacing: unset;
     }
 
     .security__info {
         padding: 0;
     }
 
+    .security__title {
+        letter-spacing: unset;
+    }
+
     .security__title__polygon {
         display: block;
         float: right;
         width: 100px;
-        height: 210px;
-        shape-outside: polygon(99% 0%, 100% 00%, 64% 94%, 75% 75%);
+        height: 190px;
+        shape-outside: polygon(100% 12%, 100% 100%, 10% 100%);
     }
 
     .security__description__polygon {
@@ -784,7 +798,7 @@ body {
         float: right;
         width: 125px;
         height: 216px;
-        shape-outside: polygon(39% 67%, 79% 29%, 0% 85%);
+        shape-outside: polygon(38% 67%, 100% 15%, 0% 85%);
     }
 
     .privacy__wrapper {
@@ -793,6 +807,10 @@ body {
 
     .privacy__content {
         margin: 60px 16px;
+    }
+
+    .privacy__description {
+        letter-spacing: unset;
     }
 
     .privacy__image__wrapper {
