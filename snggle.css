@@ -96,18 +96,22 @@ body {
 }
 
 .navigation__item__label {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 64px;
     line-height: 144%;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    background: url("./static/images/label_dark_theme.svg");
+    background: url("./static/images/label_dark_theme.png");
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-size: 500% 100%;
+    background-size: 500% 300%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.navigation__item:nth-of-type(2) .navigation__item__label {
+    opacity: 0.5;
 }
 
 .navigation__item__arrow {
@@ -146,6 +150,7 @@ body {
     align-items: center;
     padding: 120px 150px 120px;
     overflow: hidden;
+    position: relative;
 }
 
 .mobile {
@@ -171,8 +176,8 @@ body {
 
 .main__info__description,
 .main__info__description-history {
-    padding-top: 50px;
-    font-family: "Mulish", sans-serif;
+    margin-top: 42px;
+    font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 42px;
@@ -182,19 +187,30 @@ body {
 }
 
 .main__info__description-history {
-    margin-top: 130px;
+    position: absolute;
+    right: 150px;
+    margin-top: 136px;
     padding: unset;
     font-size: 36px;
+    line-height: 58px;
     text-align: center;
 }
 
 .main__info__description-history b {
+    font-family: "Mulish ExtraBoldItalic", sans-serif;
     font-size: 64px;
+}
+
+.main__info__description b,
+.main__info__description-mobile b {
+    font-family: "Mulish ExtraBold", sans-serif;
+    font-weight: 800;
 }
 
 .main__info__description__image {
     float: left;
-    margin-left: -150px;
+    margin-left: -156px;
+    margin-top: 40px;
     height: 739px;
     shape-outside: url("./static/images/snggle/who-is_main.svg");
 }
@@ -208,7 +224,7 @@ body {
 .main__additional__description {
     position: relative;
     z-index: 2;
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -217,7 +233,12 @@ body {
     color: #000000;
 }
 
+.main__additional__description br:nth-of-type(2) {
+    display: none;
+}
+
 .main__additional__description b {
+    font-family: "Mulish Black", sans-serif;
     font-weight: 1000;
     text-transform: uppercase;
 }
@@ -226,7 +247,7 @@ body {
     position: absolute;
     z-index: 1;
     right: 0;
-    bottom: -190px;
+    bottom: -175px;
 }
 
 .footer {
@@ -245,6 +266,7 @@ body {
 .footer__content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 90px 150px;
 }
 
@@ -267,7 +289,7 @@ body {
 }
 
 .footer__links__list__item {
-    font-family: "Mulish", sans-serif;
+    font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -281,7 +303,17 @@ body {
     color: white;
 }
 
-@media (max-width: 1245px) {
+.footer__links__divider {
+    width: 1px;
+    background: #fff;
+} 
+
+@media (max-width: 1280px) {
+    .main__info__description-history {
+        position: unset;
+        right: unset;
+    }
+    .main__info__description p,
     .main__info__description-history p {
         display: inline;
     }
@@ -311,7 +343,7 @@ body {
 
     .main__info {
         gap: 25px;
-        padding: 120px 5% 120px;
+        padding: 120px 5% 50px;
     }
 
     .main__info__title {
@@ -328,6 +360,10 @@ body {
         letter-spacing: 0.03em;
         text-align: center;
     }
+
+    .main__info__description-mobile__polygon {
+        display: none;
+    }
     
     .main__info__description-mobile:nth-of-type(2) {
         text-align: left;
@@ -335,6 +371,7 @@ body {
     }
 
     .main__info__description-mobile:nth-of-type(2) b {
+        font-family: "Mulish ExtraBoldItalic", sans-serif;
         font-size: 36px;
     }
 
@@ -377,8 +414,12 @@ body {
         display: inline;
     }
 
-    .main__additional__description__mobile b {
-        font-size: 18px;
+    .main__additional__description p:nth-of-type(5) {
+        margin-top: 18px;
+    }
+
+    .main__additional__description br:nth-of-type(2) {
+        display: unset;
     }
 
     .main__additional__image {
@@ -437,6 +478,15 @@ body {
     .main__info {
         padding: 120px 16px 50px;
         margin: unset;
+    }
+
+    .main__info__description-mobile__polygon {
+        display: block;
+        float: right;
+        width: 100px;
+        height: 300px;
+        clip-path: polygon(76% 90%, 57% 51%, 100% 90%, 51% 74%);
+        shape-outside: polygon(76% 90%, 57% 51%, 100% 90%, 51% 74%);
     }
 
     .footer__wrapper {
