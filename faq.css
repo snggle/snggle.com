@@ -158,9 +158,9 @@ body {
 .main__title {
     padding: 80px 0;
     text-align: left;
-    font-family: "Mulish", sans-serif;
-    font-style: italic;
-    font-weight: 600;
+    font-family: "Gummy Book", sans-serif;
+    font-style: normal;
+    font-weight: 800;
     font-size: 140px;
     line-height: 144%;
     background: linear-gradient(90deg, #CBCCCD 31.22%, #E3EAEF 50.13%, #CBCCCD 70.6%);

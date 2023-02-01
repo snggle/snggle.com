@@ -278,7 +278,7 @@ body {
 
 .security__content {
     margin: 0 150px 0 0;
-    height: 632px;
+    height: 644px;
 }
 
 .security__info {
@@ -286,7 +286,7 @@ body {
 }
 
 .security__main-image {
-    width: 65%;
+    width: 66%;
     height: 100%;
     shape-outside: url("./static/images/home/security_section.png");
     shape-margin: 0;
@@ -304,7 +304,7 @@ body {
     line-height: 144%;
     letter-spacing: 0.03em;
     color: #000000;
-    padding: 0 0 0 42%;
+    padding: 0 0 0 43%;
     max-width: 1450px;
 }
 
@@ -315,7 +315,7 @@ body {
 
 .security__description {
     display: block;
-    margin-top: 30px;
+    margin-top: 1.5rem;
     text-align: right;
     font-family: "Mulish", sans-serif;
     font-style: normal;
@@ -465,17 +465,9 @@ body {
     .intro__description div {
         display: inline;
     }
-    
-    .security__description div {
-        display: inline;
-    }
 
-    .security__info {
-        padding: 2.5% 0 0 0;
-    }
-
-    .security__description {
-        margin-top: 1.5rem;
+    .security__title {
+        padding: 0 0 0 42%;
     }
 
     .intro__info {
@@ -496,11 +488,36 @@ body {
     }
 }
 
+@media (max-width: 1235px) {
+    .security__info {
+        padding: 7.5% 0;
+    }
+
+    .security__description div {
+        display: inline;
+    }
+}
+
 @media (max-width: 1200px) {
 
     .privacy__content {
         flex-direction: column;
         margin: 130px 150px;
+    }
+}
+
+@media (max-width: 1098px) {
+    .security__info {
+        padding: 5% 0;
+    }
+
+    .security__description div,
+    .security__title {
+        letter-spacing: 0.01em;
+    }
+
+    .security__main-image {
+        shape-margin: 5px;
     }
 }
 
