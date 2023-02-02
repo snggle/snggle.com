@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SNGGLE</title>
+        <link rel="icon" type="image/png" href="https://ipfs.snggle.com/ipfs/QmSyisGGSbiNfunsmPsNMGCofEzaq3hi2HK6ESrRfQoSLQ">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="faq.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <section class="header">
+            <div class="header__wrapper">
+                <div class="header__content">
+                    <button
+                    class="header__menu"
+                    id="navigation-toggle"
+                    onclick="toggleNavigation()"
+                ></button>
+                </div>
+            </div>
+        </section>
+        <nav class="navigation" id="navigation">
+            <div class="navigation__wrapper">
+                <div class="navigation__content">
+                    <a href="./index.html" class="navigation__item">
+                        <span class="navigation__item__label">
+                            Home
+                        </span>
+                        <img
+                            src="./static/images/faq/arrow_light_theme.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a href="./snggle.html" class="navigation__item">
+                        <span class="navigation__item__label">
+                            SNGGLE !?
+                        </span>
+                        <img
+                            src="./static/images/faq/arrow_light_theme.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a class="navigation__item">
+                        <span class="navigation__item__label">
+                            FAQ
+                        </span>
+                        <img
+                            src="./static/images/faq/reverted_arrow_light_theme.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a class="navigation__item" href="https://docs.snggle.com" target="_blank">
+                        <span class="navigation__item__label">
+                            Documentation
+                        </span>
+                        <img
+                            src="./static/images/faq/arrow_light_theme.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a  href="https://github.com/snggle/snggle/releases" target="_blank" class="navigation__item">
+                        <span class="navigation__item__label">
+                            Download
+                        </span>
+                        <img
+                            src="./static/images/faq/arrow_light_theme.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                    <a onclick="showContactSectionAndCloseNavbar()" href="#contact" class="navigation__item">
+                        <span class="navigation__item__label">
+                            Contribute
+                        </span>
+                        <img
+                            src="./static/images/faq/arrow_light_theme.svg"
+                            alt="arrow"
+                            class="navigation__item__arrow"
+                        />
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section class="main">
+            <div class="main__wrapper">
+                <div class="main__content">
+                    <h1 class="main__title">
+                        FAQ
+                    </h1>
+                    <ul class="main__points">
+                        <li class="main__points__item">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('what-is')">
+                                <span class="main__points__item__label__text">
+                                    What is SNGGLE APP?
+                                </span>
+                                <img
+                                    src="./static/images/faq/plus.svg"
+                                    alt="plus"
+                                    class="main__points__item__label__image"
+                                    id="what-is-plus"
+                                />
+                                <img
+                                    src="./static/images/faq/minus.svg"
+                                    alt="minus"
+                                    class="main__points__item__label__image-minus"
+                                    id="what-is-minus"
+                                />
+                            </div>
+                            <div class="main__points__item__content" id="what-is">
+                                <span>
+                                    SNGGLE is a first of its kind hardware security & communication system. SNGGLE is
+                                    an entirely off-line mobile application whose purpose is to keep all your inmost
+                                    secrets safe within. 
+                                </span>
+                                <span>
+                                    As the user, you are empowered to make SNGGLE truly yours, to help it protect
+                                    what's most dear and valuable to you. SNGGLE will always be at your side whether
+                                    it's a password, a document, a photo, a 2FA code, a private key carrying
+                                    unfathomable wealth within or the utmost private conversation. No matter what the
+                                    task at hand, SNGGLE will find a way to make you worry less about your security.
+                                </span>
+                                <span>
+                                    SNGGLE is your best friend and a beloved partner in crime that will never judge or
+                                    betray you, no matter what difficulties and challenges life might have in store for
+                                    you.
+                                </span>
+                                <span>
+                                    The SNGGLE app is an ever-evolving labor of love for true privacy with the utmost
+                                    consideration for what truly matters to those in need of the most fundamental
+                                    freedoms for every human being on the planet. With SNGGLE you can truly become
+                                    your authentic self, express and manifest your hopes, opinions, and desires, all
+                                    without anyone looking over your shoulder.
+                                </span>
+                                <span>
+                                    Whether you are lost or uncertain, SNGGLE will hold your hand, teach and guide
+                                    you toward the best possible practices to keep you, your friends and your family
+                                    safe.
+                                </span>
+                                <span>
+                                    Thanks to its shapeshifting nature the app can accompany you in your daily routine,
+                                    at work and at leisure. SNGGLE will change its form to give you maximum power in
+                                    executing the toughest security tasks without making its true capacity apparent to
+                                    the outside world.
+                                </span>
+                            </div>
+                        </li>
+                        <li class="main__points__item" class="main__points__item">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('functionalities')">
+                                <span class="main__points__item__label__text">
+                                    What exact functionalities does SNGGLE have?
+                                </span>
+                                <img
+                                    src="./static/images/faq/plus.svg"
+                                    alt="plus"
+                                    class="main__points__item__label__image"
+                                    id="functionalities-plus"
+                                />
+                                <img
+                                    src="./static/images/faq/minus.svg"
+                                    alt="minus"
+                                    class="main__points__item__label__image-minus"
+                                    id="functionalities-minus"
+                                />
+                            </div>
+                            <div class="main__points__item__content" id="functionalities">
+                                <span>SNGGLE's function is an ever-lasting and evolving conversation on security and privacy. Its initial set of features will consist of: </span>
+                                <div class="main__points__item__content__label">
+                                    <img
+                                        src="./static/images/faq/heart.svg"
+                                        alt="heart point"
+                                    />
+                                    <span class="main__points__item__content__label__text">
+                                        <b>Secrets Manager</b> - encrypted storage for files, documents, photos, secrets,
+                                        contacts, 2FA codes, and more, with the ability to fine-tune categories, double-
+                                        blind passwords, and customize access levels to all your secrets. SNGGLE
+                                        Secrets Manager is the most sophisticated secrets privacy tool in the industry
+                                        for managing data that never requires exposure of your device to an internet
+                                        connection.
+                                    </span>
+                                </div>
+                                <div class="main__points__item__content__label">
+                                    <img
+                                        src="./static/images/faq/heart.svg"
+                                        alt="heart point"
+                                    />
+                                    <span class="main__points__item__content__label__text">
+                                        <b>Private Key Vaults</b> - enables the organization of asymmetric keys, signing of
+                                        transactions and messages, persisting history of every signature generated by
+                                        the user and derivation of multiple public addresses from seed phrases.
+                                        SNGGLE Vaults can act as independent hardware wallets protected by
+                                        individual mnemonic phrases and independent user defined access layers.
+                                    </span>
+                                </div>
+                                <div class="main__points__item__content__label">
+                                    <img
+                                        src="./static/images/faq/heart.svg"
+                                        alt="heart point"
+                                    />
+                                    <span class="main__points__item__content__label__text">
+                                        <b>SNGGLE Apps</b> - suite of useful tools essential to maintain your privacy and
+                                        freedom under any circumstances. Whether you need to securely generate
+                                        new mnemonics, passwords or create an end-to-end encrypted
+                                        communication chat, SNGGLE will teach you how and help you accomplish
+                                        even the most challenging security tasks.
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main__points__item">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('communication')">
+                                <span class="main__points__item__label__text">
+                                    How can SNGGLE communicate with the world?
+                                </span>
+                                <img
+                                    src="./static/images/faq/plus.svg"
+                                    alt="plus"
+                                    class="main__points__item__label__image"
+                                    id="communication-plus"
+                                />
+                                <img
+                                    src="./static/images/faq/minus.svg"
+                                    alt="minus"
+                                    class="main__points__item__label__image-minus"
+                                    id="communication-minus"
+                                />
+                            </div>
+                            <div class="main__points__item__content" id="communication">
+                                <span>
+                                    SNGGLE uses end-to-end encrypted and air-gapped means of communication with
+                                    other Snggles to transport signatures, messages, documents, passwords or any
+                                    other secret information to and from devices that require them. 
+                                </span>
+                                <span>
+                                    With support for both sequential QR codes and a fully hands off experience over our
+                                    in-house developed audio transmission protocol SNGGLE makes it safe and
+                                    convenient to interact with the world while remaining fully off-line.
+                                </span>
+                                <span>
+                                    Whether it's a trusted website requesting a password or a pending transaction
+                                    requiring a signature, SNGGLE can detect, present its details to the user for
+                                    approval and propagate any secret, document or message to any desired and
+                                    verified destination.
+                                </span>
+                            </div>
+                        </li>
+                        <li class="main__points__item">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('advantages')">
+                                <span class="main__points__item__label__text">
+                                    How is SNGGLE better than other applications?
+                                </span>
+                                <img
+                                    src="./static/images/faq/plus.svg"
+                                    alt="plus"
+                                    class="main__points__item__label__image"
+                                    id="advantages-plus"
+                                />
+                                <img
+                                    src="./static/images/faq/minus.svg"
+                                    alt="minus"
+                                    class="main__points__item__label__image-minus"
+                                    id="advantages-minus"
+                                />
+                            </div>
+                            <div class="main__points__item__content" id="advantages">
+                                <span>
+                                    While various privacy applications might offer certain features overlapping with
+                                    SNGGLE, they often remain online and require installation on all your devices to
+                                    function, unintentionally divulging all your secrets to anyone who takes control over
+                                    any single one of your devices in an unauthorized manner.
+                                </span>
+                                <span>
+                                    SNGGLE is intended to exist as an extension of your own hand in a single copy with
+                                    exceptions for optional and encrypted backups. When it comes to dedicated
+                                    hardware security devices (such as "Ledger", "Trezor" or any others), their sheer
+                                    physical appearance poses a direct life-threatening risk for the user.
+                                </span>
+                                <span>
+                                    SNGGLE never reveals its true form and purpose as it remains hidden in plain sight
+                                    within your airplane-mode-enabled mobile device, making it risk-free to carry with
+                                    you to the hinterlands as one of the millions of unassuming apps. Though a user
+                                    customized access layer, even under the stress of wrench attacks SNGGLE can
+                                    morph into the optimal form to help you make it out of the worst trouble. 
+                                </span>
+                            </div>
+                        </li>
+                        <li class="main__points__item" id="contact">
+                            <div class="main__points__item__label"  onclick="toggleFAQPoint('contact-us')">
+                                <span class="main__points__item__label__text">
+                                    How can I SNGGLE?
+                                </span>
+                                <img
+                                    src="./static/images/faq/plus.svg"
+                                    alt="plus"
+                                    class="main__points__item__label__image"
+                                    id="contact-us-plus"
+                                />
+                                <img
+                                    src="./static/images/faq/minus.svg"
+                                    alt="minus"
+                                    class="main__points__item__label__image-minus"
+                                    id="contact-us-minus"
+                                />
+                            </div>
+                            <div class="main__points__item__content" id="contact-us">
+                                <span>
+                                    To get in touch or contribute to
+                                    the Snggle ecosystem please send the PGP encrypted email
+                                    to <a class="main__points__item__content__link" href="mailto:hugs@snggle.com">hugs@snggle.com</a> 
+                                </span>
+                                <div class="main__points__item__content__key">
+                                    <span>
+                                        -----BEGIN PGP PUBLIC KEY BLOCK-----
+                                    </span>
+                                    <span>
+                                        mQENBGOXa3oBCACjQaWCAFt5qHJP8vqHR6fDSAxwY/ydpcGEFcHPFhoC4/RYi6TaTB4IaTKUH0kUqJ4crx5Cm8cy/QrUOnFJM7r0ifO0IO3anvOAd6usqIz+Ro3U1yTY2TzhlVmA5lyWmcQj7YaLBFfqwfR6dKTGyVIL37rQ7ULRrxRnQJtz+y3aEBUzQt8iNM36y8pZanIg/MkiH3mMWusaxdKhhEY9n3KKGUWDq2okfPnu2fplrvZkeqhKkONCV5tMNM/JJmjaAOqrtAq6FDvdmMTmxtkkW2G6xPLuvEIdHMiFf7w/+3gQqB/w5QnSfIcLGapdV9j9IcRLwo+1h3GFMJzsdCPUD+D7ABEBAAG0GHNuZ2dsZSA8aHVnc0BzbmdnbGUuY29tPokBUQQTAQgAOxYhBF052Cc0ORDiDB4fsZIdc+cWT9daBQJjl2t6AhsDBQsJCAcCAiICBhUKCQgLAgQWAgMBAh4HAheAAAoJEJIdc+cWT9dat6UH/2auq5KKkgMir9+Y22fdEcdf4Gjld7DkRUoFYFIen9EUz2hbufjMaiERpU3x2RsqMhzn6DtP6BOZSQET+HyKNjQl3o+Jvbgdpedfik5Cgw6xJhOk/YAmiv0U9IeFzJwg0x1ZbTFfNnp/H6iWsEMQh/CFlFG012UjqwGTdKVkqX2T17t4y/tpC/yjQVRioBlRHSdjFX9V6HIC/QIckDOMOVYJEFcTSpuAWfWXHJC62sBd6d/9ctvvShBN8S9hKooXuF+zeZJg5GrGDU9B56lsaztR1ebHJ0urJM3Iq3u4LMv4ohKs9lf3dGRQhYRisnJZD1X62MfEOh8rfd302Tjhdk25AQ0EY5dregEIANNFRXq3SgazP+yU29YEJkfjWth0XIkkqEraVIhBuCcpOZcm/+ZGFJcgxC4kTWyN9z21I3IDJ2YY+jqJA6aGSwYGVXV9VnuqGkXJ3Rb0gFPuIpQKkqYBiLBjTBmMNuAMjwEUlF3dRSYmOd9CcmO69ru8W0A8tagCup1kDvlMpPeYptrn567F+VBkuxSb46kssEhjofBdZorXaFzjLgqDcLl2LrSF2EFl8f6PHamJ/8lzPZDAGsXyrvXRuz8GUdsMF7bMmCc15kpDsst9zSUokJenrzwgR67cdf5JJMB5nXdZd/2e4fSAC/gby1lziw21QnZ2HHgTsrQQFgZNilUBPRcAEQEAAYkBNgQYAQgAIBYhBF052Cc0ORDiDB4fsZIdc+cWT9daBQJjl2t6AhsMAAoJEJIdc+cWT9dagJQH/Anes5jr/11ndVaGIw4+21WDIiGJ90Im9ArVXQpivc0pPTnXzyiVIeNfMXvKeGC8n5S2VAfUS6jmtcTZ9bEuEgg54OkjHgcbmH/WK4AnhqA3dqE2F2ug3JMqxZGUeR0SvfvULbn7FN3en6qyO3F6zi8yZs80jDzeX2UL4Il+VqM2jK81TDFWbkpm9H6c60+wcqgEhY4p1Mb/6W5lRAGIb8u1G/enV/Iio9Mga7FiA5ZVWfbq18DCDijqi3JeZbPWSlG/8K4TkfctgQ4OkcqwShsUASjhoKG+lwyP7LVuPrBQ7cSu9/VcKXI8W012QnxBpV165wmyo0GCx/KR0DZXlvA==XH/s
+                                    </span>        
+                                    <span>
+                                        -----END PGP PUBLIC KEY BLOCK-----
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <img
+                    src="./static/images/faq/faq.svg"
+                    alt="faq"
+                    class="main__image"
+                />
+                <img
+                    src="./static/images/faq/faq_mobile.svg"
+                    alt="faq"
+                    class="main__image-mobile"
+                />
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__content">
+                    <div class="footer__image__wrapper">
+                        <img
+                            src="./static/images/logo.svg"
+                            alt="logo"
+                            class="footer__image"
+                        />
+                    </div>
+                    <div class="footer__links">
+                        <ul class="footer__links__list">
+                            <li class="footer__links__list__item">
+                                <a href="./index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a href="./snggle.html">
+                                    SNGGLE !?
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a href="./faq.html">
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__links__list">
+                            <li class="footer__links__list__item">
+                                <a href="https://docs.snggle.com" target="_blank">
+                                    Documentation
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a href="https://github.com/snggle/snggle/releases" target="_blank">
+                                    Download
+                                </a>
+                            </li>
+                            <li class="footer__links__list__item">
+                                <a onclick="showContactSection()" href="#contact">
+                                    Contribute
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+        /** Shows contact section. */
+        function showContactSection() {
+            document.getElementById("contact-us").classList.add("show-faq-point")
+            document.getElementById("contact-us-plus").classList.add("hide-image-plus")
+            document.getElementById("contact-us-minus").classList.add("show-image-minus")
+        }
+
+        /** Shows contact section and closes navigation on navbar contribute button click. */
+        function showContactSectionAndCloseNavbar() {
+            toggleNavigation();
+            showContactSection();
+        }
+
+        /** Shows contact section if path contain 'contact' hash. */
+        if (window.location.hash === "#contact") {
+            showContactSection();
+        }
+
+        /** Shows/closes navigation.
+         * Toggles navigation class for button and disables scroll behaviour.
+         */
+        function toggleNavigation() {
+            document.getElementById("navigation").classList.toggle("show")
+            document.getElementById("navigation-toggle").classList.toggle("close")
+            document.body.classList.toggle("scroll-disabled")
+        }
+
+        function toggleFAQPoint(id) {
+            document.getElementById(id).classList.toggle("show-faq-point")
+            document.getElementById(`${id}-plus`).classList.toggle("hide-image-plus")
+            document.getElementById(`${id}-minus`).classList.toggle("show-image-minus")
+        }
+    </script>
+</html>

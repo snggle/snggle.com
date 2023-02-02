@@ -1,0 +1,499 @@
+body {
+    background-image: url("./static/images/snggle/bg.png");
+    background-size: 100% 100%;
+    zoom: 0.8;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+
+.header__wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    background: #000000;
+    backdrop-filter: blur(87px);
+    -webkit-backdrop-filter: blur(87px);
+}
+
+.header__content {
+    margin: 12px 150px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__menu {
+    width: 52px;
+    height: 56px;
+    cursor: pointer;
+    background: url("./static/images/burger_menu_dark.svg");
+    outline: none;
+    background-position: center;
+    border: none;
+}
+
+.navigation {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    z-index: 3;
+    width: 100%;
+    height: calc(100vh + 20%);
+}
+
+.navigation__wrapper {
+    width: 100%;
+    max-width: 1600px;
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(87px);
+    -webkit-backdrop-filter: blur(87px);
+}
+
+.navigation__content {
+    margin: 0 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-disabled {
+    overflow: hidden;
+}
+
+.close {
+    background: url("./static/images/burger_menu_close_dark.svg");
+    background-size: cover;
+}
+
+.navigation__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 1.5%;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.74);
+    cursor: pointer;
+}
+
+.navigation__item:nth-child(2) {
+    cursor: not-allowed;
+}
+
+.navigation__item:last-child {
+    border-bottom: none;
+}
+
+.navigation__item__label {
+    font-family: "Mulish ExtraBold", sans-serif;
+    font-style: normal;
+    font-size: 64px;
+    line-height: 144%;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    background: url("./static/images/label_dark_theme.png");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 500% 300%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navigation__item:nth-of-type(2) .navigation__item__label {
+    opacity: 0.5;
+}
+
+.navigation__item__arrow {
+    width: 174px;
+    height: 74px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main__wrapper {
+    display: flex;
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+    background-image: url("./static/images/snggle/snggle_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 120px 150px 120px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.mobile {
+    display: none;
+}
+
+.main__info__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: "Mulish Bold", sans-serif;
+    font-style: normal;
+    font-size: 94px;
+    line-height: 144%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.main__info__title__image {
+    width: 284px;
+    height: 280px;
+}
+
+.main__info__description,
+.main__info__description-history {
+    margin-top: 42px;
+    font-family: "Mulish SemiBold", sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 144%;
+    text-align: right;
+    letter-spacing: 0.03em;
+}
+
+.main__info__description-history {
+    font-family: "Mulish", sans-serif;
+    position: absolute;
+    right: 150px;
+    margin-top: 136px;
+    padding: unset;
+    font-size: 36px;
+    line-height: 58px;
+    text-align: center;
+}
+
+.main__info__description-history b {
+    font-family: "Mulish ExtraBoldItalic", sans-serif;
+    font-size: 64px;
+}
+
+.main__info__description b,
+.main__info__description-mobile b {
+    font-family: "Mulish ExtraBold", sans-serif;
+    letter-spacing: unset;
+}
+
+.main__info__description__image {
+    float: left;
+    margin-left: -166px;
+    margin-top: 40px;
+    height: 739px;
+    shape-outside: url("./static/images/snggle/who-is_main.svg");
+}
+
+.main__additional {
+    margin: 0 auto 95px 150px;
+    position: relative;
+    width: calc(100% - 150px);
+}
+
+.main__additional__description {
+    position: relative;
+    z-index: 2;
+    font-family: "Mulish SemiBold", sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.main__additional__description br:nth-of-type(2) {
+    display: none;
+}
+
+.main__additional__description b {
+    font-family: "Mulish Black", sans-serif;
+    text-transform: uppercase;
+}
+
+.main__additional__image {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -175px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__wrapper {
+    width: 100%;
+    max-width: 1600px;
+    background: #000000;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 150px;
+}
+
+.footer__image {
+    height: 158px;
+    width: 212px;
+}
+
+.footer__links {
+    width: 465px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__links__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    list-style-type: none;
+}
+
+.footer__links__list__item {
+    font-family: "Mulish SemiBold", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 144%;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer__links__list__item a {
+    color: white;
+}
+
+.footer__links__divider {
+    width: 1px;
+    background: #fff;
+} 
+
+@media (max-width: 1280px) {
+    .main__info {
+        margin: unset;
+        padding: 120px 150px;
+        width: unset;
+    }
+
+    .main__info__description-history {
+        position: unset;
+        right: unset;
+    }
+    .main__info__description p,
+    .main__info__description-history p {
+        display: inline;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .header__content {
+        margin: 12px 5%;
+    }
+
+    .navigation__content {
+        margin: 0 5%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .main__content {
+        width: 100%;
+    }
+
+    .main__info {
+        gap: 25px;
+        padding: 120px 5% 50px;
+    }
+
+    .main__info__title {
+        font-size: 46px;
+    }
+
+    .main__info__description-mobile {
+        padding: unset;
+        font-family: "Mulish", sans-serif;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 144%;
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+
+    .main__info__description-mobile__polygon {
+        display: none;
+    }
+    
+    .main__info__description-mobile:nth-of-type(2) {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .main__info__description-mobile:nth-of-type(2) b {
+        font-family: "Mulish ExtraBoldItalic", sans-serif;
+        font-size: 36px;
+    }
+
+    .main__info__logo {
+        width: 164px;
+        height: 160px;
+    }
+
+    .main__info__description b {
+        font-size: 24px;
+    }
+
+    .main__info__description:nth-of-type(2) {
+        font-size: 20px;
+    }
+
+    .main__info__description:nth-of-type(2) b {
+        font-size: 36px;
+    }
+
+    .main__info__image {
+        width: 115%;
+    }
+
+    .main__additional {
+        margin: unset;
+        padding: 0 5% 225px;
+        width: 90%;
+    }
+
+    .main__additional__description {
+        width: unset;
+        font-size: 18px;
+    }
+
+    .main__additional__description p {
+        display: inline;
+    }
+
+    .main__additional__description p:nth-of-type(5) {
+        margin-top: 18px;
+    }
+
+    .main__additional__description br:nth-of-type(2) {
+        display: unset;
+    }
+
+    .main__additional__image {
+        height: 480px;
+        bottom: -60px;
+        right: 0;
+    }
+
+    .navigation__item {
+        padding: 10px 0;
+    }
+
+    .navigation__item__label {
+        font-size: 26px;
+    }
+
+    .navigation__item__arrow {
+        width: 84px;
+        height: 36px;
+    }
+
+    .footer__content {
+        margin: 40px 5%;
+    }
+
+    .footer__image__wrapper {
+        display: none;
+    }
+
+    .footer__links {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        zoom: 1;
+    }
+
+    .header__wrapper {
+        max-width: 600px;
+    }
+
+    .navigation {
+        height: calc(100vh - 80px);
+    }
+
+    .navigation__wrapper {
+        max-width: 600px;
+    }
+
+    .main__wrapper {
+        max-width: 600px;
+    }
+
+    .main__info {
+        padding: 120px 16px 50px;
+        margin: unset;
+    }
+
+    .main__info__description-mobile__polygon {
+        display: block;
+        float: right;
+        width: 100px;
+        height: 300px;
+        clip-path: polygon(76% 90%, 57% 51%, 100% 90%, 51% 74%);
+        shape-outside: polygon(76% 90%, 57% 51%, 100% 90%, 51% 74%);
+    }
+
+    .footer__wrapper {
+        max-width: unset;
+    }
+    
+    .footer__links__list__item {
+        font-size: 16px;
+    }
+}
