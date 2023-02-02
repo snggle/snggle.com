@@ -98,7 +98,6 @@ body {
 .navigation__item__label {
     font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
-    font-weight: 800;
     font-size: 64px;
     line-height: 144%;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
@@ -148,9 +147,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 120px 150px 120px;
+    margin: 120px 150px 120px;
     overflow: hidden;
     position: relative;
+    width: 100%;
 }
 
 .mobile {
@@ -160,9 +160,10 @@ body {
 .main__info__title {
     display: flex;
     align-items: center;
-    font-family: "Mulish", sans-serif;
+    justify-content: center;
+    width: 100%;
+    font-family: "Mulish Bold", sans-serif;
     font-style: normal;
-    font-weight: 800;
     font-size: 94px;
     line-height: 144%;
     letter-spacing: 0.03em;
@@ -179,7 +180,6 @@ body {
     margin-top: 42px;
     font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 42px;
     line-height: 144%;
     text-align: right;
@@ -187,6 +187,7 @@ body {
 }
 
 .main__info__description-history {
+    font-family: "Mulish", sans-serif;
     position: absolute;
     right: 150px;
     margin-top: 136px;
@@ -204,12 +205,12 @@ body {
 .main__info__description b,
 .main__info__description-mobile b {
     font-family: "Mulish ExtraBold", sans-serif;
-    font-weight: 800;
+    letter-spacing: unset;
 }
 
 .main__info__description__image {
     float: left;
-    margin-left: -156px;
+    margin-left: -166px;
     margin-top: 40px;
     height: 739px;
     shape-outside: url("./static/images/snggle/who-is_main.svg");
@@ -226,7 +227,6 @@ body {
     z-index: 2;
     font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
-    font-weight: 600;
     font-size: 32px;
     line-height: 163%;
     letter-spacing: 0.03em;
@@ -239,7 +239,6 @@ body {
 
 .main__additional__description b {
     font-family: "Mulish Black", sans-serif;
-    font-weight: 1000;
     text-transform: uppercase;
 }
 
@@ -291,7 +290,6 @@ body {
 .footer__links__list__item {
     font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 20px;
     line-height: 144%;
     color: #fff;
@@ -309,6 +307,12 @@ body {
 } 
 
 @media (max-width: 1280px) {
+    .main__info {
+        margin: unset;
+        padding: 120px 150px;
+        width: unset;
+    }
+
     .main__info__description-history {
         position: unset;
         right: unset;
@@ -354,7 +358,6 @@ body {
         padding: unset;
         font-family: "Mulish", sans-serif;
         font-style: normal;
-        font-weight: 500;
         font-size: 24px;
         line-height: 144%;
         letter-spacing: 0.03em;
@@ -386,12 +389,10 @@ body {
 
     .main__info__description:nth-of-type(2) {
         font-size: 20px;
-        font-weight: 500;
     }
 
     .main__info__description:nth-of-type(2) b {
         font-size: 36px;
-        font-weight: 800;
     }
 
     .main__info__image {
@@ -406,7 +407,6 @@ body {
 
     .main__additional__description {
         width: unset;
-        font-weight: 600;
         font-size: 18px;
     }
 

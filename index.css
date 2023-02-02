@@ -94,7 +94,6 @@ body {
 .navigation__item__label {
     font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
-    font-weight: 800;
     font-size: 64px;
     line-height: 144%;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
@@ -166,7 +165,6 @@ body {
     width: 1450px;
     font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
-    font-weight: 800;
     font-size: 28px;
     line-height: 144%;
     margin-top: 335px;
@@ -195,15 +193,13 @@ body {
 }
 
 .intro__description div b {
-    font-family: "Mulish Light", sans-serif;
-    font-weight: 600;
+    font-family: "Mulish Bold", sans-serif;
 }
 
 .intro__main-image {
     height: 100%;
     float: right;
     shape-outside: url("./static/images/home/intro_section.svg");
-    shape-margin: 13px;
 }
 
 .about {
@@ -231,13 +227,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 81.25%;
+    max-width: 81%;
 }
 
 .about__description {
     font-family: "Mulish Medium", sans-serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 44px;
     line-height: 144%;
     text-align: center;
@@ -246,7 +241,6 @@ body {
 }
 
 .about__description b {
-    font-weight: 500;
     font-family: "Mulish Italic", sans-serif;
 }
 
@@ -286,7 +280,7 @@ body {
 }
 
 .security__main-image {
-    width: 66%;
+    width: 65%;
     height: 100%;
     shape-outside: url("./static/images/home/security_section.png");
     shape-margin: 0;
@@ -299,27 +293,24 @@ body {
     text-align: left;
     font-family: "Mulish Medium", sans-serif;
     font-style: normal;
-    font-weight: 400;
     font-size: 28px;
     line-height: 144%;
     letter-spacing: 0.03em;
     color: #000000;
-    padding: 0 0 0 43%;
+    padding: 0 0 0 617px;
     max-width: 1450px;
 }
 
 .security__title b {
     font-family: "Mulish SemiBold";
-    font-weight: 600;
 }
 
 .security__description {
     display: block;
-    margin-top: 1.5rem;
+    margin-top: 30px;
     text-align: right;
     font-family: "Mulish", sans-serif;
     font-style: normal;
-    font-weight: 400;
     font-size: 28px;
     line-height: 40px;
     letter-spacing: 0.08em;
@@ -334,7 +325,6 @@ body {
 
 .security__description div b {
     font-family: "Mulish SemiBold";
-    font-weight: 600;
 }
 
 .privacy {
@@ -367,7 +357,6 @@ body {
     max-width: 802px;
     font-family: "Mulish ExtraBoldItalic", sans-serif;
     font-style: italic;
-    font-weight: 800;
     font-size: 54px;
     line-height: 114%;
     letter-spacing: 0.03em;
@@ -377,7 +366,6 @@ body {
 .privacy__description {
     font-family: "Mulish", sans-serif;
     font-style: normal;
-    font-weight: 400;
     font-size: 28px;
     line-height: 144%;
     letter-spacing: 0.03em;
@@ -386,7 +374,6 @@ body {
 
 .privacy__description b {
     font-family: "Mulish SemiBold", sans-serif;
-    font-weight: 600;
 }
 
 .privacy__image__wrapper {
@@ -441,7 +428,6 @@ body {
 .footer__links__list__item {
     font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 20px;
     line-height: 144%;
     color: #000000;
@@ -453,6 +439,24 @@ body {
     color: #000;
 }
 
+@media (min-width: 2112px) {
+    .security__info {
+        padding: 95px 0 0 0;
+    }
+}
+
+@media (max-width: 1746px) {
+    .security__info {
+        padding: 93px 0 0 0;
+    }
+}
+
+@media (max-width: 1536px) {
+    .security__info {
+        padding: 89px 0 0 0;
+    }
+}
+
 @media (max-width: 1280px) {
     .about__intro {
         max-width: 75%;
@@ -462,8 +466,9 @@ body {
     .intro__title div {
         display: inline;
     }
-    .intro__description div {
-        display: inline;
+
+    .security__info {
+        padding: 88px 0 0 0;
     }
 
     .security__title {
@@ -488,11 +493,11 @@ body {
     }
 }
 
-@media (max-width: 1235px) {
-    .security__info {
-        padding: 7.5% 0;
+@media (max-width: 1250px) {
+    .intro__description div {
+        display: inline;
     }
-
+    
     .security__description div {
         display: inline;
     }
@@ -506,18 +511,9 @@ body {
     }
 }
 
-@media (max-width: 1098px) {
+@media (max-width: 1130px) {
     .security__info {
-        padding: 5% 0;
-    }
-
-    .security__description div,
-    .security__title {
-        letter-spacing: 0.01em;
-    }
-
-    .security__main-image {
-        shape-margin: 5px;
+        padding: 30px 0 0 0;
     }
 }
 

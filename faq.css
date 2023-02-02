@@ -101,7 +101,6 @@ body {
 .navigation__item__label {
     font-family: "Mulish ExtraBold", sans-serif;
     font-style: normal;
-    font-weight: 800;
     font-size: 64px;
     line-height: 144%;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
@@ -160,7 +159,6 @@ body {
     text-align: left;
     font-family: "Gummy Book", sans-serif;
     font-style: normal;
-    font-weight: 800;
     font-size: 140px;
     line-height: 144%;
     background: linear-gradient(90deg, #CBCCCD 31.22%, #E3EAEF 50.13%, #CBCCCD 70.6%);
@@ -197,15 +195,12 @@ body {
 }
 
 .main__points__item__content__link {
-    font-weight: 700;
     text-decoration: none;
     color: #000;
 }
 
 .main__points__item__label__text {
     font-family: "Mulish SemiBoldItalic", sans-serif;
-    font-style: italic;
-    font-weight: 600;
     font-size: 32px;
     line-height: 144%;
     letter-spacing: 0.03em;
@@ -220,7 +215,6 @@ body {
 
 .main__points__item__content__label__text b {
     font-family: "Mulish BoldItalic", sans-serif;
-    font-weight: 700;
 }
 
 .main__points__item__label__image-minus {
@@ -245,7 +239,6 @@ body {
     width: 100%;
     font-family: "Mulish Medium", sans-serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 26px;
     line-height: 182%;
     letter-spacing: 0.03em;
@@ -268,14 +261,11 @@ body {
     border-radius: 44px;
     font-family: "Liberation Mono", sans-serif;
     font-size: 26px;
-    font-weight: 400;
     line-height: 43px;
     letter-spacing: 0.01em;
+    word-break: break-all;
 }
 
-.main__points__item__content__key span {
-    word-break: break-word;
-}
 
 .show-faq-point {
     display: flex;
@@ -324,7 +314,6 @@ body {
 .footer__links__list__item {
     font-family: "Mulish SemiBold", sans-serif;
     font-style: normal;
-    font-weight: 500;
     font-size: 20px;
     line-height: 144%;
     color: #000;
@@ -367,7 +356,6 @@ body {
     }
 
     .main__points__item__label__text {
-        font-weight: 600;
         font-size: 20px;
     }
 
@@ -385,7 +373,7 @@ body {
     .main__points__item__content__key {
         font-size: 16px;
         line-height: 28px;
-        padding: 14px;
+        padding: 12px;
         height: 372px;
         overflow-y: scroll;
     }
