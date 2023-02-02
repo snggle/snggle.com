@@ -1,6 +1,12 @@
 @font-face {
+    font-family: "Gummy Book";
+    src: url("./static/fonts/GummyBook.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Mulish";
-    src: url("./static/fonts/Mulish.ttf") format("truetype");
+    src: url("./static/fonts/Mulish-Regular.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -153,6 +159,13 @@ video {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 60px;
 }
 
 body {
