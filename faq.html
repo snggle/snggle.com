@@ -73,7 +73,7 @@
                             class="navigation__item__arrow"
                         />
                     </a>
-                    <a class="navigation__item">
+                    <a onclick="showContactSectionAndCloseNavbar()" href="#contact" class="navigation__item">
                         <span class="navigation__item__label">
                             Contribute
                         </span>
@@ -94,7 +94,7 @@
                     </h1>
                     <ul class="main__points">
                         <li class="main__points__item">
-                            <div class="main__points__item__label" onclick="toggleFAQPoint(1)">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('what-is')">
                                 <span class="main__points__item__label__text">
                                     What is SNGGLE APP?
                                 </span>
@@ -102,16 +102,16 @@
                                     src="./static/images/faq/plus.svg"
                                     alt="plus"
                                     class="main__points__item__label__image"
-                                    id="1-plus"
+                                    id="what-is-plus"
                                 />
                                 <img
                                     src="./static/images/faq/minus.svg"
                                     alt="minus"
                                     class="main__points__item__label__image-minus"
-                                    id="1-minus"
+                                    id="what-is-minus"
                                 />
                             </div>
-                            <div class="main__points__item__content" id="1">
+                            <div class="main__points__item__content" id="what-is">
                                 <span>
                                     SNGGLE is a first of its kind hardware security & communication system. SNGGLE is
                                     an entirely off-line mobile application whose purpose is to keep all your inmost
@@ -150,7 +150,7 @@
                             </div>
                         </li>
                         <li class="main__points__item" class="main__points__item">
-                            <div class="main__points__item__label" onclick="toggleFAQPoint(2)">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('functionalities')">
                                 <span class="main__points__item__label__text">
                                     What exact functionalities does SNGGLE have?
                                 </span>
@@ -158,16 +158,16 @@
                                     src="./static/images/faq/plus.svg"
                                     alt="plus"
                                     class="main__points__item__label__image"
-                                    id="2-plus"
+                                    id="functionalities-plus"
                                 />
                                 <img
                                     src="./static/images/faq/minus.svg"
                                     alt="minus"
                                     class="main__points__item__label__image-minus"
-                                    id="2-minus"
+                                    id="functionalities-minus"
                                 />
                             </div>
-                            <div class="main__points__item__content" id="2">
+                            <div class="main__points__item__content" id="functionalities">
                                 <span>SNGGLE's function is an ever-lasting and evolving conversation on security and privacy. Its initial set of features will consist of: </span>
                                 <div class="main__points__item__content__label">
                                     <img
@@ -212,7 +212,7 @@
                             </div>
                         </li>
                         <li class="main__points__item">
-                            <div class="main__points__item__label" onclick="toggleFAQPoint(3)">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('communication')">
                                 <span class="main__points__item__label__text">
                                     How can SNGGLE communicate with the world?
                                 </span>
@@ -220,16 +220,16 @@
                                     src="./static/images/faq/plus.svg"
                                     alt="plus"
                                     class="main__points__item__label__image"
-                                    id="3-plus"
+                                    id="communication-plus"
                                 />
                                 <img
                                     src="./static/images/faq/minus.svg"
                                     alt="minus"
                                     class="main__points__item__label__image-minus"
-                                    id="3-minus"
+                                    id="communication-minus"
                                 />
                             </div>
-                            <div class="main__points__item__content" id="3">
+                            <div class="main__points__item__content" id="communication">
                                 <span>
                                     SNGGLE uses end-to-end encrypted and air-gapped means of communication with
                                     other Snggles to transport signatures, messages, documents, passwords or any
@@ -249,7 +249,7 @@
                             </div>
                         </li>
                         <li class="main__points__item">
-                            <div class="main__points__item__label" onclick="toggleFAQPoint(4)">
+                            <div class="main__points__item__label" onclick="toggleFAQPoint('advantages')">
                                 <span class="main__points__item__label__text">
                                     How is SNGGLE better than other applications?
                                 </span>
@@ -257,16 +257,16 @@
                                     src="./static/images/faq/plus.svg"
                                     alt="plus"
                                     class="main__points__item__label__image"
-                                    id="4-plus"
+                                    id="advantages-plus"
                                 />
                                 <img
                                     src="./static/images/faq/minus.svg"
                                     alt="minus"
                                     class="main__points__item__label__image-minus"
-                                    id="4-minus"
+                                    id="advantages-minus"
                                 />
                             </div>
-                            <div class="main__points__item__content" id="4">
+                            <div class="main__points__item__content" id="advantages">
                                 <span>
                                     While various privacy applications might offer certain features overlapping with
                                     SNGGLE, they often remain online and require installation on all your devices to
@@ -288,8 +288,8 @@
                                 </span>
                             </div>
                         </li>
-                        <li class="main__points__item">
-                            <div class="main__points__item__label"  onclick="toggleFAQPoint(5)">
+                        <li class="main__points__item" id="contact">
+                            <div class="main__points__item__label"  onclick="toggleFAQPoint('contact-us')">
                                 <span class="main__points__item__label__text">
                                     How can I SNGGLE?
                                 </span>
@@ -297,16 +297,16 @@
                                     src="./static/images/faq/plus.svg"
                                     alt="plus"
                                     class="main__points__item__label__image"
-                                    id="5-plus"
+                                    id="contact-us-plus"
                                 />
                                 <img
                                     src="./static/images/faq/minus.svg"
                                     alt="minus"
                                     class="main__points__item__label__image-minus"
-                                    id="5-minus"
+                                    id="contact-us-minus"
                                 />
                             </div>
-                            <div class="main__points__item__content" id="5">
+                            <div class="main__points__item__content" id="contact-us">
                                 <span>
                                     To get in touch or contribute to
                                     the Snggle ecosystem please send the PGP encrypted email
@@ -379,7 +379,7 @@
                                 </a>
                             </li>
                             <li class="footer__links__list__item">
-                                <a href="./faq.html">
+                                <a onclick="showContactSection()" href="#contact">
                                     Contribute
                                 </a>
                             </li>
@@ -390,6 +390,24 @@
         </footer>
     </body>
     <script>
+        /** Shows contact section. */
+        function showContactSection() {
+            document.getElementById("contact-us").classList.add("show-faq-point")
+            document.getElementById("contact-us-plus").classList.add("hide-image-plus")
+            document.getElementById("contact-us-minus").classList.add("show-image-minus")
+        }
+
+        /** Shows contact section and closes navigation on navbar contribute button click. */
+        function showContactSectionAndCloseNavbar() {
+            toggleNavigation();
+            showContactSection();
+        }
+
+        /** Shows contact section if path contain 'contact' hash. */
+        if (window.location.hash === "#contact") {
+            showContactSection();
+        }
+
         /** Shows/closes navigation.
          * Toggles navigation class for button and disables scroll behaviour.
          */

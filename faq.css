@@ -163,10 +163,11 @@ body {
     line-height: 144%;
     background: linear-gradient(90deg, #CBCCCD 31.22%, #E3EAEF 50.13%, #CBCCCD 70.6%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    -webkit-text-stroke: 1px #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.6px #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .main__points {
@@ -195,6 +196,7 @@ body {
 }
 
 .main__points__item__content__link {
+    font-family: "Mulish ExtraBold", sans-serif;
     text-decoration: none;
     color: #000;
 }
@@ -232,7 +234,6 @@ body {
 .hide-image-plus {
     display: none;
 }
-
 
 .main__points__item__content {
     display: none;
