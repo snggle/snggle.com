@@ -422,5 +422,33 @@
             document.getElementById(`${id}-plus`).classList.toggle("hide-image-plus")
             document.getElementById(`${id}-minus`).classList.toggle("show-image-minus")
         }
+
+        const WRAPPER_WIDTH = 1600;
+        const ZOOM_COEFICIENT = 0.8;
+        const CONTENT_WIDTH = WRAPPER_WIDTH*ZOOM_COEFICIENT;
+        let SPACE_TO_CLICK_WIDTH = (window.innerWidth - CONTENT_WIDTH)/2;
+        let LEFT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH;
+        let RIGHT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH + CONTENT_WIDTH;
+
+        /** Re-calculates left and right breakpoints depends on viewport width and zoom effect. */
+        window.visualViewport.addEventListener("resize", () => {
+            SPACE_TO_CLICK_WIDTH = (window.innerWidth - CONTENT_WIDTH)/2;
+            LEFT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH;
+            RIGHT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH + CONTENT_WIDTH;
+        });
+
+        /** Detecs right/left side click and redirect to index/snggle pages. */
+        document.addEventListener("click", (e) => {
+            if (window.innerWidth < 1300) {
+                return;
+            }
+
+            if (e.pageX < LEFT_X_COORDINATE_BREAK_POINT) {
+                window.location.href = './snggle.html';
+            }
+            if (e.pageX > RIGHT_X_COORDINATE_BREAK_POINT) {
+                window.location.href = './index.html';
+            }
+        });
     </script>
 </html>
