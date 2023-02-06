@@ -1,3 +1,3 @@
 ### Features
-* First release to IPFS
-* Redirection site
+* New style of IPFS redirection site
+* Fix SH256 of the release content files
