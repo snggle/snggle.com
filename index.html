@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
 
 const sleep = (milliseconds) => {
@@ -19,7 +20,7 @@ async function main() {
   var sleepPromise = sleep(4000)
 
   console.info("INFO: Setting up load balancing...")
-  var cid = "bafybeiekbuq7k73huzskzu6jadsoj6uxiplmnona5dnafyeqhxclzrswsu"
+  var cid = "bafybeify57eexkznu4kw44q3ylzjaljvz26f4ykfnolmpxycnidup7d6d4"
 
   // Choose random gateway to distribute the traffic
   var gateways = [
@@ -38,14 +39,10 @@ async function main() {
     window.location.replace(gateway);
   } else {
     console.error("ERROR: Failure, resources were NOT found!")
-    document.getElementById('div-info').style.display = 'none'
-    document.getElementById('div-error').style.display = ''
-
-    document.getElementById('vid-snggle').style.display = 'none'
-    document.getElementById('vid-404').style.display = ''
- 
+    document.getElementById('loader').style.display = 'none'
+    document.getElementById('not-found').style.display = 'block'
     console.error("ERROR: We were not able to find the app")
-    console.info("INFO: Visit following github page to find latest release: https://github.com/snggle/snggle.com/releases/tag/v0.0.1")
+    console.info("INFO: Visit following github page to find latest release: https://github.com/snggle/snggle.com/releases/tag/v0.0.2")
   }
 
   console.info("INFO: Page loader finished")
@@ -56,52 +53,126 @@ main();
 </script>
 
 <style>
-  @font-face { font-family: Modeseven; src: url('https://ipfs.snggle.com/ipfs/QmWDFHNFY6ZajwBrZrrMBP3FEkDE1Ef5pVCeLbWN6ihdt7'); } 
-  html, body {background-color: black;justify-content: center;text-align: center;display: block; height: 99% }
-  span {color: #d5d5d5; line-height: 1.7;font-size: 18px;font-family:'Modeseven'}
-  video {   width: 256px; padding-bottom: 32px;   }
-  p {text-align:center; justify-content: center; align-items: center; padding: 8px; }
-  div {text-align:center; justify-content: center; align-items: center; display: block; margin-left: auto; margin-right: auto; }
-  .container { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+@font-face {
+    font-family: "Mulish";
+    src: url("./static/fonts/Mulish-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0);
+}
+
+.loader,
+.not-found {
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    line-height: 218%;
+    letter-spacing: 0.16em;
+    color: white;
+}
+
+.not-found {
+    display: none;
+}
+
+.loader__link,
+.not-found__link {
+    text-decoration: none;
+    color: rgba(251, 234, 210, 1);
+    cursor: pointer;
+}
+
+.loader__image {
+    height: 152px;
+    width: 162px;
+}
+
+.not-found__image {
+    width: 398px;
+    height: 160px;
+}
+
+@media (max-width: 850px) {
+    .loader,
+    .not-found {
+        margin: 0 16px;
+        font-size: 16px;
+    }
+
+    .loader__text,
+    .not-found__text {
+        display: inline;
+    }
+
+    .not-found__image {
+        width: 322px;
+        height: 125px;
+    }
+}
+
 </style>
 <title>SNGGLE</title>
 <link rel="icon" type="image/png" href="https://ipfs.snggle.com/ipfs/QmSyisGGSbiNfunsmPsNMGCofEzaq3hi2HK6ESrRfQoSLQ">
 </head>
 <body>
-  <div class="container">
-  <video id="vid-snggle" autoplay loop muted inline style="display:'';">
-    <source src="https://ipfs.snggle.com/ipfs/Qmcu1UUUbanLeAeBSWWJERBz9GvwKNcRiokU1oZxvJRsQ2" type="video/mp4">
-  </video>
-  <video id="vid-404" autoplay loop muted inline style="display: none; height: 192px;margin-top: 78px;">
-    <source src="https://ipfs.snggle.com/ipfs/QmWhmm3tQd6SDq6eAFdnjvT8frTZiA5yERrwD4cFx5o9U6" type="video/mp4">
-  </video>
-  <div>
-    <div id="div-info" style="width: 768px; display:'';">
-      <span>You are leaving </span>
-      <a href="https://snggle.com"><span><strong>snggle.com</strong></span></a>&nbsp
-      <span>
-        and are being redirected to the independent, community-operated instance of the open source front end, hosted and served on the distributed, peer-to-peer file network IPFS...
-      </span>
-    </div>
-  </div>
-  <div>
-    <div  id="div-error" style="width: 768px; display: none;">
-      
-      <span><b>CID: bafybeiekbuq7k73huzskzu6jadsoj6uxiplmnona5dnafyeqhxclzrswsu</b><br><br></span>
-
-      <span>The IPFS gateway is currently not available, please visit our </span>
-      <a id="rel-link" href="https://github.com/snggle/snggle.com/releases/tag/v0.0.1"><span><strong>GitHub repository</strong></span></a>&nbsp
-      <span>
-        where you can download latest release, alternatively copy above CID and try another 
-        <a id="rel-link" href="https://ipfs.github.io/public-gateway-checker/"><span><strong>public gateway</strong></span></a>
-        or click
-      </span>
-      <a href="#" onclick="window.location.reload(true);"><span><strong>F5</strong></span></a>&nbsp
-      <span>
-        to refresh the page and try connecting again :)
-      </span>
-    </div>
-  </div>
-</div>
+    <section class="container">
+        <div id="loader" class="loader">
+            <div class="loader__image__wrapper">
+                <img
+                    src="./static/images/logo.gif"
+                    alt="logo"
+                    class="loader__image"
+                />
+            </div>
+            <div class="loader__text">
+                You are leaving <a class="loader__link" href="https://snggle.com"><b>snggle.com</b></a> and are being redirected to the independent,
+            </div>
+            <div class="loader__text">
+                community-operated instance of the open source front end, hosted
+            </div>
+            <div class="loader__text">
+                and served on the distributed, peer-to-peer file network IPFS...
+            </div>
+        </div>
+        <div id="not-found" class="not-found">
+            <img
+                src="./static/images/not-found.png"
+                alt="not found"
+                class="not-found__image"
+            />
+            <div class="not-found__text">CID: bafybeify57eexkznu4kw44q3ylzjaljvz26f4ykfnolmpxycnidup7d6d4</div>
+            <div class="not-found__text">
+                The IPFS gateway is currently not available, please visit our
+                <a class="not-found__link" href="https://github.com/snggle/snggle.com/releases/tag/v0.0.2"><b>GitHub repository</b></a>
+            </div>
+            <div class="not-found__text">
+                where you can download latest release, alternatively copy above CID 
+            </div>
+            <div class="not-found__text">
+                and try another <a class="not-found__link" href="https://ipfs.github.io/public-gateway-checker/"><b>public gateway</b></a>
+                or click <a class="not-found__link" href="./redirect.html"><b>F5</b></a> to refresh
+            </div>
+            <div class="not-found__text">
+                the page and try connecting again :)
+            </div>
+        </div>
+</section>
 </body>
 </html>
