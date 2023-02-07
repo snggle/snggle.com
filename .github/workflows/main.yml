@@ -56,12 +56,13 @@ jobs:
           ZIP_FILENAME="${{env.DNS}}.zip"
           rm -fv "./$ZIP_FILENAME"
           zip -r "./$ZIP_FILENAME" ./*
-          mkdir -p ${{env.RELEASE}}
+          mkdir -p ${{env.RELEASE}}/static
 
           echo "${{env.IPFS_HASH}}" > "${{env.RELEASE}}/ipfs-cid.txt"
           cp -fv ./RELEASE.md "${{env.RELEASE}}/RELEASE.md"
           cp -fv ./LICENSE.md "${{env.RELEASE}}/LICENSE.md"
           cp -fv ./${INDEX_MODE}.html "${{env.RELEASE}}/index.html"
+          cp -rfv ./static/* "${{env.RELEASE}}/static"
 
           echo "${{env.DNS}}" > "${{env.RELEASE}}/CNAME"
           echo "www.${{env.DNS}}" >> "${{env.RELEASE}}/CNAME"
@@ -103,14 +104,14 @@ jobs:
           echo -e "       Release Versions: ${{env.VERSION}}" >> ./bin/RELEASE.md
           echo -e "      Release Date Time: $(date --rfc-2822)" >> ./bin/RELEASE.md
           echo -e "       Release CID Hash: ${{env.IPFS_HASH}}\n\r" >> ./bin/RELEASE.md
-          echo "      html-web-site.zip: sha256:$(sha256sum ./html-web-site.zip | awk '{ print $1 }')" >> ./bin/RELEASE.md
-          echo "           ipfs-cid.txt: sha256:$(sha256sum ./ipfs-cid.txt | awk '{ print $1 }')" >> ./bin/RELEASE.md
-          echo "             index.html: sha256:$(sha256sum ./index.html | awk '{ print $1 }')" >> ./bin/RELEASE.md
+          echo "      html-web-site.zip: sha256:$(sha256sum ${{env.RELEASE}}/html-web-site.zip | awk '{ print $1 }')" >> ./bin/RELEASE.md
+          echo "           ipfs-cid.txt: sha256:$(sha256sum ${{env.RELEASE}}/ipfs-cid.txt | awk '{ print $1 }')" >> ./bin/RELEASE.md
+          echo "             index.html: sha256:$(sha256sum ${{env.RELEASE}}/index.html | awk '{ print $1 }')" >> ./bin/RELEASE.md
           echo -e "\`\`\`"   >> ./bin/RELEASE.md
           
           cd ./bin
           echo "$KEY" > ../../cosign.key
-          for FILE in *; do FILE_NAME=$(basename $FILE); cosign sign-blob --key=../../cosign.key --output-signature=./${FILE_NAME}.sig ./$FILE_NAME; done
+          for FILE in *; do FILE_NAME=$(basename $FILE); [ -f ./$FILE_NAME ] && cosign sign-blob --key=../../cosign.key --output-signature=./${FILE_NAME}.sig ./$FILE_NAME; done
           rm -fv ../../cosign.key
           ls -a1 "${{env.RELEASE}}"
       - name: Delete old release
