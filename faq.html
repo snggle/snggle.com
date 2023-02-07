@@ -23,6 +23,11 @@
         <nav class="navigation" id="navigation">
             <div class="navigation__wrapper">
                 <div class="navigation__content">
+                    <img
+                        src="./static/images/cloud.svg"
+                        alt="image"
+                        class="navigation__image"
+                    />
                     <a href="./index.html" class="navigation__item">
                         <span class="navigation__item__label">
                             Home
@@ -423,32 +428,43 @@
             document.getElementById(`${id}-minus`).classList.toggle("show-image-minus")
         }
 
-        const WRAPPER_WIDTH = 1600;
-        const ZOOM_COEFICIENT = 0.8;
-        const CONTENT_WIDTH = WRAPPER_WIDTH*ZOOM_COEFICIENT;
-        let SPACE_TO_CLICK_WIDTH = (window.innerWidth - CONTENT_WIDTH)/2;
-        let LEFT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH;
-        let RIGHT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH + CONTENT_WIDTH;
+        const LEFT_KEY_CODE = 37
+        const RIGHT_KEY_CODE = 39
 
-        /** Re-calculates left and right breakpoints depends on viewport width and zoom effect. */
-        window.visualViewport.addEventListener("resize", () => {
-            SPACE_TO_CLICK_WIDTH = (window.innerWidth - CONTENT_WIDTH)/2;
-            LEFT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH;
-            RIGHT_X_COORDINATE_BREAK_POINT = SPACE_TO_CLICK_WIDTH + CONTENT_WIDTH;
+        window.addEventListener("keydown", (e) => {
+            if (e.keyCode === LEFT_KEY_CODE) {
+                window.location.href = './snggle.html'
+            }
+            if (e.keyCode === RIGHT_KEY_CODE) {
+                window.location.href = './index.html'
+            }
         });
 
-        /** Detecs right/left side click and redirect to index/snggle pages. */
-        document.addEventListener("click", (e) => {
-            if (window.innerWidth < 1300) {
-                return;
-            }
+        /** Touch start/end x positions. */
+        let TOUCH_START_X = 0;
+        let TOUCH_END_X = 0;
 
-            if (e.pageX < LEFT_X_COORDINATE_BREAK_POINT) {
-                window.location.href = './snggle.html';
-            }
-            if (e.pageX > RIGHT_X_COORDINATE_BREAK_POINT) {
+        function swipeNavigation() {
+            const SWIPE_WIDTH = window.innerWidth*0.6;
+
+            if (TOUCH_END_X < TOUCH_START_X && ((TOUCH_START_X - TOUCH_END_X) > SWIPE_WIDTH)) {
                 window.location.href = './index.html';
             }
-        });
+            
+            if (TOUCH_END_X > TOUCH_START_X && (TOUCH_END_X - TOUCH_START_X) > SWIPE_WIDTH) {
+                window.location.href = './snggle.html';
+            }
+        }
+
+        /** Detects touch start event. */
+        window.addEventListener('touchstart', (e) => {
+            TOUCH_START_X = e.changedTouches[0].screenX;
+        }, false);
+
+        /** Detects touch end event. */
+        window.addEventListener('touchend', (e) => {
+            TOUCH_END_X = e.changedTouches[0].screenX;
+            swipeNavigation();
+        }, false);
     </script>
 </html>
